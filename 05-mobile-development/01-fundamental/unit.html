@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      :root {
+        /* font-size: 12px; */
+        font-size: 10px;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: pink;
+        font-size: 40px;
+      }
+
+      .item1 {
+        font-size: 20px;
+        width: 2em;
+        height: 3em;
+        background-color: khaki;
+      }
+      .item2 {
+        font-size: 20px;
+        /* For Chinese character, 2em is roughly 2 Chinese characters wide. */
+        text-indent: 2em;
+
+        background-color: tomato;
+      }
+
+      .rem {
+        font-size: 2rem;
+        width: 10rem;
+        height: 10rem;
+        background-color: red;
+      }
+      .vw {
+        /* 1vw = 1% of viewport width */
+        /* 1vh = 1% of viewport height */
+        /* 50vw = 50% */
+        /* 25vw = 25% */
+        /* 100% of viewport width */
+        width: 100vw;
+        background-color: blue;
+        /* 100% of viewport height */
+        /* height: 100vh; */
+      }
+      .item3 {
+        /* 1% of the smaller dimension of the viewport (width or height). */
+        width: 100vmin;
+        background-color: orange;
+        /* 1% of the larger dimension of the viewport (width or height). */
+        height: 100vmax;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1"></div>
+      <div class="item2">Lorem ipsum dolor sit amet.</div>
+      <div class="rem">Lorem ipsum dolor sit, amet consectetur</div>
+      <div class="item3"></div>
+    </div>
+  </body>
+</html>

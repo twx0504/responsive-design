@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo 2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body,
+      ul {
+        margin: 0;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      .tab {
+        width: 800px;
+        height: 500px;
+        border: 3px solid red;
+        margin: 50px auto;
+      }
+
+      .tab ul {
+        display: flex;
+        gap: 10px;
+      }
+
+      .tab ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        height: 50px;
+        background-color: #ddd;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .tab ul li.active {
+        background-color: tomato;
+        color: #fff;
+      }
+
+      .tab .tab-content,
+      .tab .swiper {
+        width: 100%;
+        height: 450px; /* 500px - 50px li height */
+      }
+
+      .swiper-slide {
+        font-size: 100px;
+        text-align: center;
+        line-height: 450px;
+      }
+      .swiper-slide:nth-child(n) {
+        background-color: skyblue;
+      }
+      .swiper-slide:nth-child(2n) {
+        background-color: khaki;
+      }
+      .swiper-slide:nth-child(3n) {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <div class="tab">
+      <ul>
+        <li data-index="0" class="active">1</li>
+        <li data-index="1">2</li>
+        <li data-index="2">3</li>
+        <li data-index="3">4</li>
+        <li data-index="4">5</li>
+      </ul>
+      <div class="tab-content">
+        <div class="swiper" id="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const speed = 300;
+      const swiper = new Swiper("#swiper", {
+        direction: "horizontal",
+        grabCursor: true,
+        loop: true,
+      });
+
+      const tab = document.querySelector(".tab ul");
+      const tabItems = document.querySelectorAll(".tab ul li");
+
+      let prevTab = tabItems[0];
+
+      tab.addEventListener("click", (e) => {
+        const target = e.target.closest(".tab ul li");
+        if (target === null || target.tagName !== "LI") return;
+        if (prevTab === target) return;
+        const index = Number(target.dataset.index);
+        swiper.slideToLoop(index, speed);
+        prevTab = switchActiveTab(prevTab, target);
+      });
+
+      swiper.on("slideChangeTransitionEnd", function () {
+        const currentIndex = this.realIndex;
+        prevTab = switchActiveTab(prevTab, tabItems[currentIndex]);
+      });
+
+      function switchActiveTab(prevTab, nextTab) {
+        if (prevTab === nextTab) return prevTab;
+        prevTab.classList.remove("active");
+        nextTab.classList.add("active");
+        return nextTab;
+      }
+    </script>
+  </body>
+</html>

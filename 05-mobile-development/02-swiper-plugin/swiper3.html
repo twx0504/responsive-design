@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      .swiper {
+        width: 600px;
+        height: 300px;
+      }
+      #swiper1 {
+        /* Note: we can redefine the custom property here to override the default custom property on :root */
+        --swiper-navigation-color: red;
+      }
+
+      #swiper2 {
+        /* Note: we can redefine the custom property here to override the default custom property on :root */
+        --swiper-navigation-color: blue;
+      }
+
+      .swiper-slide {
+        width: 100%;
+      }
+      .swiper-slide:nth-child(n) {
+        background-color: skyblue;
+      }
+
+      .swiper-slide:nth-child(2n) {
+        background-color: khaki;
+      }
+      .swiper-slide:nth-child(3n) {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <button id="init">Click to init</button>
+    <button id="prev">Click to prev slide</button>
+    <button id="next">Click to next slide</button>
+    <button id="toThird">Click to third slide</button>
+    <div class="swiper" id="swiper1">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <!-- Note: add noSwipingClass (note: default class: swiper-no-swiping) to specify area you cannot drag -->
+        <div class="swiper-slide no-swipe">Slide 1 Cannot drag Slide</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">
+          Slide 3
+          <p class="no-swipe">Cannot drag Text</p>
+        </div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script>
+      const swiper1 = new Swiper("#swiper1", {
+        // Whether we want to init when create an instance, or we call init manually
+        init: false, // manually init
+        on: {
+          init: function () {
+            isInit = true;
+            console.log("init");
+            // console.log(this === swiper1, this);
+            // console.log(this.activeIndex);
+
+            // this.emit(event); // we can trigger some event here on init.
+          },
+
+          slideChangeTransitionStart: function () {
+            console.log("slideChangeTransitionStart");
+          },
+          slideChangeTransitionEnd: function () {
+            console.log("slideChangeTransitionEnd");
+          },
+        },
+
+        // Optional parameters
+        direction: "horizontal",
+
+        // Disable the loop so the background color will be expected.
+        // loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+
+          // Type of pagination: bullet, progressbar, fraction, custom
+          type: "custom",
+          renderCustom: (swiper, current, total) => {
+            let bullets = "";
+            for (let i = 1; i <= total; i++) {
+              bullets += i === current ? "🔵 " : "⚪ ";
+            }
+            return bullets;
+          },
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        // The speed of slide moving (ms)
+        speed: 300,
+
+        // Set the cursor as grab
+        grabCursor: true,
+
+        // Move by scrolling mousewheel
+        mousewheel: {
+          enabled: true,
+        },
+        // Move by keyboard
+        keyboard: {
+          enabled: true,
+        },
+        slidesPerView: "auto",
+        // Gap between slides
+        spaceBetween: 20,
+        noSwipingClass: "no-swipe",
+        // autoplay: {
+        //   enabled: true,
+        //   // delay: 500,
+        //   // stopOnLastSlide: true /* has no effect if loop mode is on. */,
+        // },
+      });
+
+      const initBtn = document.querySelector("#init");
+      const prevBtn = document.querySelector("#prev");
+      const nextBtn = document.querySelector("#next");
+      const toThirdBtn = document.querySelector("#toThird");
+
+      let isInit = false;
+
+      initBtn.addEventListener("click", () => {
+        swiper1.init();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        // Note: swiper.slidePrev(speed, runCallback=true)
+        // If runCallback is set to false, the callback of event like slideChangeTransitionStart and slideChangeTransitionEnd will not run.
+        if (isInit) {
+          swiper1.slidePrev(100, false);
+        }
+      });
+      nextBtn.addEventListener("click", () => {
+        if (isInit) {
+          swiper1.slideNext(100, false);
+        }
+      });
+      toThirdBtn.addEventListener("click", () => {
+        if (isInit) {
+          // slideTo(index, speed, runCallback)
+          // Note: slideTo is not used with loop mode and autoplay to make sure the index matched what we see.
+          // Autoplay and loop creates hidden slides to create the smooth sliding that may mess up the active index.
+          swiper1.slideTo(2, 100);
+        }
+      });
+    </script>
+  </body>
+  x
+</html>
