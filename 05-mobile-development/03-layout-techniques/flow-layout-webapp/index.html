@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flow Layout Webapp</title>
+    <link rel="stylesheet" href="./assets/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- Search bar at top -->
+    <header class="header clearfix">
+      <a class="link location-link iconfont" href="#">&#xe650;</a>
+      <a class="link chat-link iconfont" href="#">&#xe69d;</a>
+      <div class="search">
+        <input type="text" placeholder="Little Mango..." />
+        <span class="search-icon iconfont">&#xe741;</span>
+      </div>
+    </header>
+    <!-- Two rows of category icons -->
+    <nav class="menu">
+      <ul class="clearfix">
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-vegetable"></div>
+            <div class="menu-item-title">Produce</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-meat_px"></div>
+            <div class="menu-item-title">Meats</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-Fish"></div>
+            <div class="menu-item-title">Seafood</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-lengdongshipin"></div>
+            <div class="menu-item-title">Frozen</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-mimianliangyouicon"></div>
+            <div class="menu-item-title">Grains</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-Deals"></div>
+            <div class="menu-item-title">Deals</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-ice-cream"></div>
+            <div class="menu-item-title">Desserts</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-xiuxianlingshi"></div>
+            <div class="menu-item-title">Snacks</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-jiushuiyinpin"></div>
+            <div class="menu-item-title">Drinks</div>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="menu-item-icon iconfont icon-hanger"></div>
+            <div class="menu-item-title">Basics</div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Main section -->
+    <main class="main">
+      <section class="deals">
+        <div class="deals-title clearfix">
+          <span>Super Deals!</span>
+          <a class="iconfont icon-right" href="">More</a>
+        </div>
+        <div class="deals-content">
+          <ul class="clearfix">
+            <li>
+              <a class="img-wrapper" href=""
+                ><img src="https://picsum.photos/200/300" alt=""
+              /></a>
+              <div class="title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, culpa?
+              </div>
+              <div class="price-tag">
+                <span>$5<i>/box</i></span>
+                <a class="add iconfont icon-cart" href="#"></a>
+              </div>
+            </li>
+            <li>
+              <a class="img-wrapper" href=""
+                ><img src="https://picsum.photos/200/300" alt=""
+              /></a>
+              <div class="title">Lorem, ipsum.</div>
+              <div class="price-tag">
+                <span>$5<i>/box</i></span>
+                <a class="add iconfont icon-cart" href="#"></a>
+              </div>
+            </li>
+            <li>
+              <a class="img-wrapper" href=""
+                ><img src="https://picsum.photos/200/300" alt=""
+              /></a>
+              <div class="title">Lorem, ipsum.</div>
+              <div class="price-tag">
+                <span>$5<i>/box</i></span>
+                <a class="add iconfont icon-cart" href="#"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="recommend clearfix">
+        <div class="recommend-left">
+          <div class="recommend-content">
+            <div class="recommend-title">Lorem, ipsum.</div>
+            <div class="recommend-desc">Lorem ipsum dolor sit amet.</div>
+            <ul class="clearfix">
+              <li>
+                <a href=""
+                  ><img src="https://picsum.photos/200/300" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="https://picsum.photos/200/300" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="recommend-right">
+          <div class="recommend-content">
+            <div class="recommend-title">Lorem, ipsum.</div>
+            <div class="recommend-desc">Lorem ipsum dolor sit amet.</div>
+            <ul class="clearfix">
+              <li>
+                <a href=""
+                  ><img src="https://picsum.photos/200/300" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="https://picsum.photos/200/300" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="product-category">
+        <ul class="tab">
+          <!-- Navigation tabs do not need <a> -->
+          <li class="active"><span>Lorem.</span><i>Lorem, ipsum.</i></li>
+          <li><span>Lorem.</span><i>Lorem.</i></li>
+          <li><span>Lorem.</span><i>Lorem.</i></li>
+          <li><span>Lorem.</span><i>Lorem.</i></li>
+        </ul>
+        <ul class="tab-content">
+          <ul>
+            <li class="clearfix">
+              <div class="img-wrapper">
+                <a href=""
+                  ><img src="https://picsum.photos/200/300" alt=""
+                /></a>
+              </div>
+              <div class="info">
+                <div class="info-title">Lorem, ipsum dolor.</div>
+                <div class="info-label">
+                  <span>Lorem.</span><i>Lorem, ipsum dolor.</i>
+                </div>
+                <div class="info-price">
+                  <span>Lorem.</span><i>/box</i
+                  ><a class="add iconfont icon-cart" href=""></a>
+                </div>
+                <div class="info-count">
+                  <span>lorem.</span><i>Lorem, ipsum.</i>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix">
+              <div class="img-wrapper">
+                <a href=""
+                  ><img src="https://picsum.photos/200/300" alt=""
+                /></a>
+              </div>
+              <div class="info">
+                <div class="info-title">Lorem, ipsum dolor.</div>
+                <div class="info-label">
+                  <span>Lorem.</span><i>Lorem, ipsum dolor.</i>
+                </div>
+                <div class="info-price">
+                  <span>Lorem.</span><i>/box</i
+                  ><a class="add iconfont icon-cart" href=""></a>
+                </div>
+                <div class="info-count">
+                  <span>lorem.</span><i>Lorem, ipsum.</i>
+                </div>
+              </div>
+            </li>
+            <li class="clearfix">
+              <div class="img-wrapper">
+                <a href=""
+                  ><img src="https://picsum.photos/200/300" alt=""
+                /></a>
+              </div>
+              <div class="info">
+                <div class="info-title">Lorem, ipsum dolor.</div>
+                <div class="info-label">
+                  <span>Lorem.</span><i>Lorem, ipsum dolor.</i>
+                </div>
+                <div class="info-price">
+                  <span>Lorem.</span><i>/box</i
+                  ><a class="add iconfont icon-cart" href=""></a>
+                </div>
+                <div class="info-count">
+                  <span>lorem.</span><i>Lorem, ipsum.</i>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </ul>
+      </section>
+    </main>
+    <!-- Bottom tabbar -->
+    <footer class="tabbar">
+      <ul>
+        <li>
+          <a href=""><span class="iconfont icon-home"></span><i>Home</i></a>
+        </li>
+        <li>
+          <a href=""
+            ><span class="iconfont icon-category"></span><i>Category</i></a
+          >
+        </li>
+        <li>
+          <a href=""><span class="iconfont icon-cart"></span><i>Cart</i></a>
+        </li>
+        <li>
+          <a href=""><span class="iconfont icon-me"></span><i>Me</i></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

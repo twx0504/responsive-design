@@ -1,0 +1,94 @@
+/* RESET */
+
+/* 1. Use border box model */
+div,
+span,
+ul,
+li,
+p,
+a,
+input,
+img,
+i,
+div::before,
+div::after,
+span::before,
+span::after,
+a::before,
+a::after {
+  /* Border Box */
+  box-sizing: border-box;
+}
+/* 2. Set font */
+body {
+  font: 12px/1.5 "Arial";
+  color: #101010;
+  background-color: #f5f5f5; /* light grey */
+}
+
+/* 3. Remove default margin */
+body,
+ul,
+li,
+p {
+  margin: 0;
+}
+
+/* 4. Remove ul padding and list style on li */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* 5. Remove default text decoration on links */
+a {
+  display: block;
+  text-decoration: none;
+  color: #101010;
+}
+
+/* 6. Remove img whitespace issue while keeping the img as inline element */
+img {
+  vertical-align: top;
+}
+
+/* 7. Remove default input outline */
+input {
+  outline: none;
+  border: none;
+}
+
+i {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ICONFONT */
+@font-face {
+  font-family: "iconfont";
+  src:
+    url("../assets/iconfont/iconfont.woff2") format("woff2"),
+    url("../assets/iconfont/iconfont.woff") format("woff"),
+    url("../assets/iconfont/iconfont.ttf") format("truetype");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CLEARFIX */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}

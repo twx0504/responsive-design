@@ -1,0 +1,558 @@
+/* 1. HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0eb6ff;
+  padding: 7px 0;
+  z-index: 999;
+}
+
+.header .link {
+  width: 43px;
+  height: calc(44px - 2 * 7px);
+  line-height: calc(44px - 2 * 7px);
+  color: #fff;
+  font-size: 21px;
+}
+
+.header .location-link {
+  float: left;
+  padding-left: 10px;
+}
+
+.header .search {
+  position: relative;
+  margin: 0 43px 0;
+  height: 30px;
+  line-height: 30px;
+}
+
+.header .search input {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  padding-left: 35px;
+}
+.header .search input::placeholder {
+  color: #9d9e9d;
+}
+
+.header .search .search-icon {
+  width: 16px;
+  height: 16px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 16px;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
+.header .chat-link {
+  float: right;
+  padding-left: 12px;
+}
+
+/* 2. NAVIGATION MENU */
+
+.menu {
+  padding: 44px 10px 17px;
+}
+
+.menu ul li {
+  width: 20%;
+  float: left;
+  padding: 0 9px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.menu ul li .menu-item-icon {
+  position: relative;
+
+  /* Note: icon is set via iconfont font class, the icon is defined in pseudo element */
+  /* So, this element has no content. We use padding instead of height 100%  */
+  /* As padding % relative to parent containing block's width */
+  /* If li width = 50px, padding-bottom: 100% would be 50px as well. */
+  /* Maintaining the aspect ratio. */
+  padding-bottom: 100%;
+  border-radius: 50%;
+}
+
+/* Individual icon background colors */
+li:nth-child(1) .menu-item-icon {
+  background-color: #8bc34a;
+  color: #1b5e20;
+}
+li:nth-child(2) .menu-item-icon {
+  background-color: #ef9a9a;
+  color: #b71c1c;
+}
+li:nth-child(3) .menu-item-icon {
+  background-color: #81d4fa;
+  color: #01579b;
+}
+li:nth-child(4) .menu-item-icon {
+  background-color: #ce93d8;
+  color: #4a148c;
+}
+li:nth-child(5) .menu-item-icon {
+  background-color: #ffd54f;
+  color: #bf360c;
+}
+li:nth-child(6) .menu-item-icon {
+  background-color: #ffb74d;
+  color: #bf360c;
+}
+li:nth-child(7) .menu-item-icon {
+  background-color: #f06292;
+  color: #880e4f;
+}
+li:nth-child(8) .menu-item-icon {
+  background-color: #c5e1a5;
+  color: #1b5e20;
+}
+li:nth-child(9) .menu-item-icon {
+  background-color: #80deea;
+  color: #004d40;
+}
+li:nth-child(10) .menu-item-icon {
+  background-color: #b39ddb;
+  color: #311b92;
+}
+
+.menu ul li .menu-item-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 35px;
+  /* Adjust the logo stroke width */
+  -webkit-text-stroke: 0.5px;
+}
+
+.menu ul li .menu-item-title {
+  line-height: 1;
+  padding-top: 10px;
+}
+
+/* 3. MAIN */
+.main {
+  /* Ensure the bottom of main takes into account of the tabbar height. */
+  padding: 0 11px 50px;
+}
+
+/* 4. MAIN DEALS SECTION */
+.main .deals {
+  background-color: #fff;
+  border-radius: 5px;
+  line-height: 1;
+  padding: 15px 14px 14px 12px;
+}
+
+.main .deals .deals-title {
+  padding-bottom: 14px;
+}
+
+.main .deals .deals-title span {
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+}
+
+.main .deals .deals-title a {
+  /* Use relative position to fine tune the placement of this item */
+  position: relative;
+  top: -1px;
+  float: right;
+  /* Reset font-size that has changed due to iconfont */
+  font-size: 12px;
+}
+
+.icon-right::before {
+  /* Reset the iconfont style */
+  content: "";
+}
+
+.icon-right::after {
+  /* Replace it with ::after */
+  content: "\e840";
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.main .deals .deals-content ul li {
+  float: left;
+}
+
+.main .deals .deals-content ul li:nth-child(1),
+.main .deals .deals-content ul li:nth-child(2) {
+  width: 33.89%;
+  padding: 0 16px 0 10px;
+}
+.main .deals .deals-content ul li:nth-child(3) {
+  width: 32.2%;
+  padding: 0 10px 0 10px;
+}
+
+.main .deals .deals-content .img-wrapper {
+  position: relative;
+  display: block;
+  /* We would like .img-wrapper adapts to li width.
+    Note: The padding-bottom is not 100%, we calculate the ratio it is around 80+%.
+  */
+  padding-bottom: calc(81 / 94 * 100%);
+}
+.main .deals .deals-content .img-wrapper img {
+  /* Img cannot locate in the normal flow anymore. Make it out of flow */
+  position: absolute;
+  width: 100%;
+  /* Ensure the img height is 100% of the parent containing block. */
+  height: 100%;
+  /* Ensure the img to fill the space while maintaining the aspect ratio. */
+  object-fit: cover;
+}
+
+.main .deals .deals-content .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 
+    font-size: 12px line-height:1.5
+    height = 12 * 1.5 = 18px
+    space: 18px - 12px = 6px
+    top and bottom space of the text each = 3px
+    required gap = 10px
+    padding top to be added: 10px - 3px = 7px
+  */
+  padding-top: 7px;
+  padding-bottom: 4px;
+}
+
+.main .deals .deals-content .price-tag {
+  position: relative;
+  margin-top: 6px;
+}
+
+.main .deals .deals-content .price-tag span {
+  color: #ce5f41;
+}
+
+.main .deals .deals-content .price-tag .add {
+  /* Recommend using position to adjust the cart icon */
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #0eb6ff;
+  color: #fff;
+  text-align: center;
+  line-height: 22px;
+  border-radius: 50%;
+}
+/* 5. MAIN RECOMMENDATION SECTION */
+
+.main .recommend {
+  padding-top: 10px;
+}
+.main .recommend-left,
+.main .recommend-right {
+  width: 50%;
+  float: left;
+}
+
+.main .recommend .recommend-left {
+  padding-right: 5px;
+}
+
+.main .recommend .recommend-right {
+  padding-left: 4px;
+}
+
+.main .recommend .recommend-content {
+  background-color: #fff;
+  padding-bottom: 12px;
+  border-radius: 5px;
+}
+
+.main .recommend .recommend-content .recommend-title {
+  padding: 12px 0 3px 13px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main .recommend .recommend-content .recommend-desc {
+  color: #9d9e9d;
+  padding: 0 0 4px 12px;
+}
+
+.main .recommend .recommend-content ul li {
+  width: 50%;
+  float: left;
+}
+
+.main .recommend .recommend-content ul li:nth-child(1) {
+  padding-left: 14px;
+  padding-right: 11px;
+}
+
+.main .recommend .recommend-content ul li:nth-child(2) {
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+.main .recommend .recommend-content ul li a {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.main .recommend .recommend-content ul li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 6. MAIN PRODUCT CATEGORY SECTION */
+
+.main .product-category {
+  padding-top: 19px;
+}
+
+.main .product-category ul.tab {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.main .product-category ul.tab li {
+  /* 63/353 = 17.84% */
+  width: 17.84%;
+  text-align: center;
+  padding-bottom: 11px;
+}
+
+.main .product-category ul.tab li span,
+.main .product-category ul.tab li i {
+  display: block;
+}
+.main .product-category ul.tab li span {
+  font-size: 16px;
+}
+.main .product-category ul.tab li i {
+  height: 17px;
+  line-height: 17px;
+  color: #9d9e9d;
+  border-radius: 9px;
+}
+
+.main .product-category ul.tab li.active span {
+  color: #0eb6ff;
+}
+
+.main .product-category ul.tab li.active i {
+  background-color: #0eb6ff;
+  color: #fff;
+}
+.main .product-category ul.tab-content li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.main .product-category ul.tab-content li .img-wrapper {
+  /* 94px width + 9 padding left = 103px
+     103/535 * = 29.17
+  */
+  width: 29.17%;
+  /* 
+    Note: padding-bottom is relative to the parent, which is li width.
+    This ensures the padding is relative to the current element width which is 29.17%.
+  */
+  padding-bottom: calc(81 / 94 * 29.17%);
+  float: left;
+  padding-left: 9px;
+  position: relative;
+  margin-top: 23px;
+}
+
+.main .product-category ul.tab-content li .img-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main .product-category ul.tab-content li .info {
+  width: 70.83%;
+  float: right;
+  padding-left: 13px;
+}
+
+.main .product-category ul.tab-content li .info .info-title {
+  padding-top: 10px;
+  font-size: 14px;
+  height: 42px;
+}
+.main .product-category ul.tab-content li .info .info-label {
+  /* Deal with inline block white space issue. */
+  font-size: 0;
+}
+
+.main .product-category ul.tab-content li .info .info-label span,
+.main .product-category ul.tab-content li .info .info-label i {
+  /* Reset font size */
+  font-size: 12px;
+}
+.main .product-category ul.tab-content li .info .info-label span {
+  display: inline-block;
+  /* Note: height 20px including border as we use border-box. The content area is 18px */
+  height: 20px;
+  text-align: center;
+  /* Exclude top and bottom border */
+  line-height: 18px;
+  color: #ce5f41;
+  border: 1px solid #ce5f41;
+  border-radius: 4px;
+}
+.main .product-category ul.tab-content li .info .info-label i {
+  display: inline-block;
+  /* Note: height 20px including border as we use border-box. The content area is 18px */
+  height: 20px;
+  margin-left: 5px;
+  color: #9d9e9d;
+  text-align: center;
+  /* Exclude top and bottom border */
+  line-height: 18px;
+  border: 1px solid #9d9e9d;
+  border-radius: 4px;
+}
+.main .product-category ul.tab-content li .info .info-price {
+  position: relative;
+  padding-top: 7px;
+}
+.main .product-category ul.tab-content li .info .info-price span {
+  color: #ce5f41;
+}
+
+.main .product-category ul.tab-content li .info .info-price .add {
+  position: absolute;
+  top: -5px;
+  right: 14px;
+  width: 22px;
+  height: 22px;
+  background-color: #0eb6ff;
+  color: #fff;
+  text-align: center;
+  line-height: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+.main .product-category ul.tab-content li .info .info-count {
+  color: #9d9e9d;
+  padding-top: 5px;
+}
+
+/* Tabbar */
+
+.tabbar {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.tabbar ul li {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.tabbar ul li span {
+  display: block;
+  padding-top: 5px;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.tabbar ul li i {
+  color: #9d9e9d;
+}
+
+/* > 500px */
+@media screen and (min-width: 500px) {
+  .menu ul li .menu-item-title {
+    font-size: 16px;
+  }
+
+  .menu ul li .menu-item-icon::before {
+    font-size: 45px;
+  }
+
+  .main .deals .deals-title span {
+    font-size: 18px;
+  }
+  .main .deals .deals-title a {
+    font-size: 16px;
+  }
+  .main .deals .deals-content .title,
+  .main .deals .deals-content .price-tag {
+    font-size: 14px;
+  }
+
+  .main .deals .deals-content .price-tag .add {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  .main .recommend .recommend-content .recommend-title {
+    font-size: 18px;
+  }
+  .main .recommend .recommend-content .recommend-desc {
+    font-size: 16px;
+  }
+
+  .main .product-category ul.tab-content li .info .info-title {
+    font-size: 18px;
+  }
+
+  .main .product-category ul.tab-content li .info .info-label span,
+  .main .product-category ul.tab-content li .info .info-label i {
+    font-size: 14px;
+    height: 22px;
+    line-height: 20px;
+  }
+
+  .main .product-category ul.tab-content li .info .info-price {
+    font-size: 14px;
+  }
+
+  .main .product-category ul.tab-content li .info .info-count {
+    font-size: 14px;
+  }
+
+  .main .product-category ul.tab-content li .info .info-price .add {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  .tabbar {
+    height: 60px;
+  }
+  .tabbar ul li span {
+    font-size: 28px;
+  }
+
+  .tabbar ul li i {
+    font-size: 18px;
+  }
+}

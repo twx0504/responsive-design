@@ -1,0 +1,135 @@
+{
+  "id": "5133495",
+  "name": "flow-layout-webapp-mobile",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5170677",
+      "name": "酒水饮品",
+      "font_class": "jiushuiyinpin",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "5193372",
+      "name": "冷冻食品",
+      "font_class": "lengdongshipin",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "16041830",
+      "name": "米面粮油icon",
+      "font_class": "mimianliangyouicon",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "46988379",
+      "name": "休闲零食",
+      "font_class": "xiuxianlingshi",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "29935",
+      "name": "location_fill",
+      "font_class": "locationfill",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "32471",
+      "name": "cart",
+      "font_class": "cart",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
+      "icon_id": "160001",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "548041",
+      "name": "me",
+      "font_class": "me",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "7009042",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e741",
+      "unicode_decimal": 59201
+    },
+    {
+      "icon_id": "8804707",
+      "name": "hanger",
+      "font_class": "hanger",
+      "unicode": "e8ed",
+      "unicode_decimal": 59629
+    },
+    {
+      "icon_id": "12005165",
+      "name": "meat_1px",
+      "font_class": "meat_px",
+      "unicode": "eabf",
+      "unicode_decimal": 60095
+    },
+    {
+      "icon_id": "16618014",
+      "name": "chat",
+      "font_class": "chat",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "23553248",
+      "name": "Deals",
+      "font_class": "Deals",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "34453038",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e840",
+      "unicode_decimal": 59456
+    },
+    {
+      "icon_id": "34453173",
+      "name": "category",
+      "font_class": "category",
+      "unicode": "e84d",
+      "unicode_decimal": 59469
+    },
+    {
+      "icon_id": "38869289",
+      "name": "vegetable",
+      "font_class": "vegetable",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "44063366",
+      "name": "ice-cream",
+      "font_class": "ice-cream",
+      "unicode": "ea05",
+      "unicode_decimal": 59909
+    },
+    {
+      "icon_id": "45282463",
+      "name": "Fish",
+      "font_class": "Fish",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    }
+  ]
+}

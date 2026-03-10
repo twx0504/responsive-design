@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+
+      .item {
+        width: 100%;
+        /* % padding relative to the parent's containing box width */
+        padding-bottom: 100%;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
