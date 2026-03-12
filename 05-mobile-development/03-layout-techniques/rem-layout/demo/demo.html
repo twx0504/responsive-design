@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <style>
+      /* default html font-size: 16px */
+      /* We can change the font size of html to control how much 1 rem represents. */
+
+      /* 750px screen */
+      /* font-size: 10px; */
+
+      /* 375px screen */
+      /* font-size: 5px; */
+
+      /* We will set html font size using Js. */
+      /* html {
+      } */
+
+      body {
+        margin: 0;
+      }
+
+      .box {
+        width: 10rem;
+        height: 5.33rem;
+
+        background: linear-gradient(to right, pink, skyblue);
+      }
+
+      .item {
+        /* If 1rem = 10px, 750 / 10 = 75rem */
+        /* If the html font size is not 10px, then 1rem = 16px, the item width is more than box width */
+
+        /* The page is divided into 75 portions. Each portion is 10px at 750px screen*/
+        /* 750px / 75 = 10px per rem */
+
+        /* width: 75rem;
+        height: 40rem; */
+        /* If the page is divided into 10 portions only,  */
+        /* 750px / 10 = 75px per rem */
+        width: 10rem;
+        height: 5.33rem;
+        background-color: rgba(240, 230, 140, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item">Lorem.</div>
+    </div>
+    <script>
+      function initPage() {
+        const clientWidth = document.documentElement.clientWidth;
+        const portions = 10;
+        const fontSize = clientWidth / portions;
+        document.documentElement.style.fontSize = `${fontSize}px`;
+      }
+      initPage();
+
+      window.addEventListener("resize", initPage);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo 2</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .banner {
+        width: 9.4933rem;
+        height: 3.1467rem;
+        background-color: red;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner"></div>
+    <script>
+      /* Dynamic font-size calculation across all mobile device width */
+      function initPage() {
+        // Obtain the device client width
+        const clientWidth = document.documentElement.clientWidth;
+        // How many parts to divide the page into
+        const parts = 10; // 10 parts (e.g)
+        // Calculate the font-size for this screen size
+        const fontSize = clientWidth / parts;
+        // Set the html font-size
+        document.documentElement.style.fontSize = `${fontSize}px`;
+      }
+
+      initPage();
+
+      // Recalibrate on screen resize
+      window.addEventListener("resize", initPage);
+    </script>
+  </body>
+</html>

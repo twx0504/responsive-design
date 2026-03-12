@@ -1,0 +1,571 @@
+/* m-header */
+.m-header {
+  height: 0.6667rem;
+  margin: 0 0.2533rem 0.2933rem 0.3867rem;
+  display: flex;
+  align-items: center;
+}
+
+.m-header a.logo {
+  flex-grow: 1;
+}
+
+.m-header a span {
+  display: block;
+  width: 3.3333rem;
+  height: 0.64rem;
+  text-align: center;
+  line-height: 0.64rem;
+  background-color: #9d9d9d;
+  color: #fff;
+  border-radius: 0.0667rem;
+}
+
+.m-header a.search {
+  margin-right: 0.6533rem;
+}
+
+.m-header a.login {
+  margin-right: 0.56rem;
+}
+
+.m-header a.search img {
+  width: 0.5067rem;
+}
+
+.m-header a.logo img,
+.m-header a.login img {
+  width: 0.6133rem;
+}
+
+.m-header a.download {
+  width: 2.56rem;
+  height: 0.64rem;
+  background-color: #ff9f00;
+  color: #fff;
+  text-align: center;
+  line-height: 0.64rem;
+  /* font-size: 0.32rem; */
+  border-radius: 0.1067rem;
+}
+
+/* m-nav */
+.m-nav {
+  height: 0.9867rem;
+  border-bottom: 0.0133rem solid #f3f3f3;
+}
+
+#swiper-nav .swiper-slide {
+  height: 0.9867rem;
+  /* Do not add border-bottom here, .swiper has overflow:hidden; */
+}
+
+#swiper-nav .swiper-slide a {
+  /* Make sure the <a> width is the same as its content. Use inline-block instead of block */
+  display: inline-block;
+  /* Exclude 0.0267rem border-bottom */
+  height: 0.96rem;
+  line-height: 0.96rem;
+  /* Prevent reflow - all <a> element has a transparent border-bottom */
+  border-bottom: 0.0267rem solid transparent;
+  color: #6b6b6b;
+  font-size: 0.3733rem;
+}
+
+#swiper-nav .swiper-slide a.active {
+  /* Only border-bottom-color is changed and keep the layout. */
+  color: #ff9f00;
+  border-bottom-color: #ff9f00;
+}
+
+#swiper-nav .swiper-wrapper {
+  padding-left: 0.4rem;
+}
+
+/* m-main */
+
+.m-main {
+  margin: 0.2533rem 0.2533rem 0.24rem;
+  padding-bottom: 1.3333rem;
+}
+
+/* m-banner */
+
+.m-banner {
+  width: 9.4933rem;
+  height: 3.1467rem;
+}
+
+#swiper-banner {
+  border-radius: 0.1067rem;
+}
+
+#swiper-banner .swiper-pagination-bullet {
+  /* Reset swiper pagination bullets */
+  width: 0.1733rem;
+  height: 0.08rem;
+  border-radius: 0;
+  background-color: #fff;
+  opacity: 0.4;
+}
+
+#swiper-banner .swiper-pagination-bullet-active {
+  /* Reset swiper pagination bullets when active */
+  opacity: 1;
+}
+
+/* m-menu */
+.m-menu {
+  box-sizing: border-box;
+  width: 100%;
+  height: 4.1867rem;
+  border-radius: 0.1067rem;
+  margin-top: 0.24rem;
+  padding: 0.4rem 0 0.4133rem;
+  background-color: #f7f7f7;
+}
+
+.m-menu ul {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.m-menu ul li {
+  display: flex;
+  /* Each row put 5 icons */
+  width: 20%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.m-menu ul li a {
+  text-align: center;
+}
+
+.m-menu ul li a div {
+  position: relative;
+  width: 0.8533rem;
+  height: 0.8533rem;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/* Series - pink */
+.m-menu ul li:nth-child(1) a div {
+  background-color: #f1746e;
+}
+
+/* Gaming - purple */
+.m-menu ul li:nth-child(2) a div {
+  background-color: #c4b4f4;
+}
+
+/* New Shows - orange */
+.m-menu ul li:nth-child(3) a div {
+  background-color: #fcb94c;
+}
+
+/* Lifestyle - teal */
+.m-menu ul li:nth-child(4) a div {
+  background-color: #b8eeee;
+}
+/* Health - green */
+.m-menu ul li:nth-child(5) a div {
+  background-color: #4cd964;
+}
+
+/* Comedy - yellow */
+.m-menu ul li:nth-child(6) a div {
+  background-color: #f6d988;
+}
+
+/* Food - deep orange */
+.m-menu ul li:nth-child(7) a div {
+  background-color: #f07d3e;
+}
+
+/* Tech - blue */
+.m-menu ul li:nth-child(8) a div {
+  background-color: #4a90d9;
+}
+
+/* Photos - light orange */
+.m-menu ul li:nth-child(9) a div {
+  background-color: #f5a04a;
+}
+
+/* Sports - red pink */
+.m-menu ul li:nth-child(10) a div {
+  background-color: #f25c78;
+}
+
+.m-menu ul li a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.m-menu ul li a p {
+  padding-top: 0.0533rem;
+  letter-spacing: 0.0667rem;
+}
+
+/* m-recommend */
+.m-recommend {
+  margin-top: 0.24rem;
+  background-color: #f7f7f7;
+  border-radius: 0.1067rem;
+}
+
+.m-recommend .m-recommend-tab {
+  display: flex;
+  align-items: center;
+  height: 1.3867rem;
+}
+.m-recommend .m-recommend-tab li {
+  width: 1.6rem;
+  height: 0.56rem;
+  margin: 0 0.2267rem 0 0.16rem;
+  text-align: center;
+  line-height: 0.56rem;
+  color: #6c6c6c;
+  border: 0.0133rem solid #6b6b6b;
+  border-radius: 0.2933rem;
+}
+
+.m-recommend .m-recommend-tab li.active {
+  color: #ff9f00;
+  border-color: #ff9f00;
+}
+.m-recommend .m-recommend-content {
+  height: 3.9467rem;
+}
+
+.m-recommend .m-recommend-content .m-recommend-list {
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+}
+
+.m-recommend .m-recommend-content .m-recommend-list.active {
+  display: block;
+}
+
+/* Common Styles */
+.common-list {
+  width: 100%;
+}
+
+.common-list a {
+  position: relative;
+  display: block;
+  height: 2.5867rem; /* Fix the height */
+}
+
+.common-list a img {
+  border-radius: 0.1067rem;
+}
+
+.common-list a .mask {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 0.7467rem;
+  padding-left: 0.1867rem;
+  padding-right: 0.16rem;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.common-list .mask .common-list-play,
+.common-list .mask .common-list-info {
+  display: flex;
+  align-items: center;
+}
+
+.common-list .mask .common-list-play span,
+.common-list .mask .common-list-info span {
+  width: 0.4133rem;
+  height: 0.36rem;
+}
+
+.common-list .mask .common-list-play span {
+  background: url("../images/logo/play2.png") center;
+  background-size: 100% 100%;
+}
+
+.common-list .mask .common-list-info span {
+  background: url("../images/logo/list.png") center;
+  background-size: 100% 100%;
+}
+
+.common-list .mask .common-list-play i,
+.common-list .mask .common-list-info i {
+  color: #fff;
+  margin-left: 0.16rem;
+}
+
+.common-list .common-list-title {
+  height: 0.76rem;
+  line-height: 1.2;
+  margin-top: 0.1867rem;
+
+  /* Handle truncated multiple text */
+  overflow: hidden;
+  /* Add ... if the text at the end is truncated */
+  text-overflow: ellipsis;
+  /* A special container that can stack children */
+  display: -webkit-box;
+  /* Limits text to exactly 2 lines. */
+  -webkit-line-clamp: 2;
+  /* future standard */
+  line-clamp: 2;
+  /* Sets the stacking direction of lines. */
+  -webkit-box-orient: vertical;
+}
+
+.common-list .common-list-title a {
+  height: 100%;
+  color: #000;
+}
+
+/* m-hot */
+.m-hot {
+  background-color: #f7f7f7;
+  border-radius: 0.1067rem;
+  margin-top: 0.24rem;
+  padding: 0 0.2667rem;
+}
+
+.m-hot ul {
+  padding: 0.2133rem 0;
+  height: 100%;
+}
+
+.m-hot ul li {
+  border-bottom: 0.0133rem solid #e6e6e6;
+}
+
+.m-hot ul li:last-child {
+  border-bottom: none;
+}
+
+.m-hot ul li a {
+  margin: 0.2667rem 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.m-hot ul li a .m-hot-img {
+  width: 1.0133rem;
+  flex-shrink: 0;
+}
+
+.m-hot ul li a .m-hot-img img {
+  border-radius: 0.1067rem;
+}
+
+.m-hot ul li a .m-hot-text {
+  margin-left: 0.24rem;
+  margin-right: 0.24rem;
+  height: 100%;
+  line-height: 1;
+  width: 6.8533rem;
+  font-size: 0.3467rem;
+}
+
+.m-hot ul li a .m-hot-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.0133rem;
+  height: 100%;
+}
+
+.m-hot ul li a .icon-play {
+  width: 0.5867rem;
+  flex-shrink: 0;
+}
+
+.m-hot ul li a .m-hot-text .m-hot-title {
+  color: #ff9f00;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.m-hot ul li a .m-hot-text .m-hot-desc {
+  margin-top: 0.2267rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+
+/* m-focus */
+
+.m-focus {
+  background-color: #f7f7f7;
+  border-radius: 0.1067rem;
+  margin-top: 0.24rem;
+}
+
+.m-focus .m-focus-title {
+  display: flex;
+  height: 1.0933rem;
+  align-items: center;
+}
+
+.m-focus .m-focus-title span.title-text {
+  flex-grow: 1;
+  font-size: 0.4267rem;
+  margin-left: 0.1333rem;
+}
+
+.m-focus .m-focus-title a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-right: 0.2667rem;
+}
+
+.m-focus .m-focus-title a .img-wrapper {
+  width: 0.1467rem;
+  height: 0.2667rem;
+  margin-left: 0.2533rem;
+}
+
+.m-focus .m-focus-content {
+  width: 100%;
+  height: 4.28rem;
+}
+
+#swiper-focus .swiper-slide {
+  /* fix the slide width, let swiper decides how many slides to be presented. */
+  width: 2.2667rem;
+}
+
+.m-focus .m-focus-content .swiper-slide a {
+  display: block;
+}
+
+.m-focus .m-focus-content .swiper-slide a .m-focus-img {
+  width: 100%;
+  height: 3.04rem;
+}
+
+.m-focus .m-focus-content .swiper-slide a .m-focus-img img {
+  border-radius: 0.1067rem;
+}
+
+.m-focus .m-focus-content .swiper-slide a .m-focus-desc {
+  margin-top: 0.1707rem;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* m-view-list */
+.m-view-list {
+  margin-top: 0.24rem;
+}
+
+.m-view-list ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.m-view-list ul li {
+  width: 4.6133rem;
+  margin-bottom: 0.3733rem;
+}
+
+/* tabbar */
+.m-tabbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: 1.3333rem;
+  background-color: #fff;
+  /* For non-ios phones */
+  padding: 0;
+  /* IOS<11.2 */
+  padding-bottom: constant(safe-area-inset-bottom);
+  /* IOS>11.2 */
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.m-tabbar ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2rem 0.5867rem 0;
+}
+
+.m-tabbar ul li {
+  width: 0.64rem;
+}
+
+.m-tabbar ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.m-tabbar ul li.create {
+  width: 1.04rem;
+  height: 1.0133rem;
+}
+
+.m-tabbar ul li.create a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3733rem;
+  background: #ff9f00 url("../images/logo/plus.png") no-repeat center/0.5333rem
+    0.4933rem;
+}
+.m-tabbar .m-tabbar-img {
+  width: 0.4933rem;
+  height: 0.4933rem;
+}
+
+.m-tabbar ul li a p {
+  margin-top: 0.0533rem;
+}
+
+.m-tabbar ul li a p.vip {
+  margin-top: 0.0533rem;
+  position: relative;
+}
+.m-tabbar ul li a p.vip i {
+  width: 1.3333rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}

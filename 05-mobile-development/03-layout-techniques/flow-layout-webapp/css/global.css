@@ -69,6 +69,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+body, html {
+  height: 2000px;
+}
+
 /* ICONFONT */
 @font-face {
   font-family: "iconfont";

@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, viewport-fit=cover, initial-scale=1.0"
+    />
+    <title>Rem + Flex Layout Webapp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- m-header starts -->
+    <header class="m-header">
+      <a href="" class="logo"><span>Company Logo</span></a>
+      <a href="" class="search"
+        ><img src="./images/logo/search.png" alt=""
+      /></a>
+      <!-- Note: Considering min font-size of a browser is 12px, there's risk of text overflow. Use img. -->
+      <a href="" class="login"><img src="./images/logo/login.png" alt="" /></a>
+      <a href="" class="download">Download App</a>
+    </header>
+    <!-- m-header ends -->
+    <!-- m-nav starts -->
+    <nav class="m-nav">
+      <!-- swiper-nav starts -->
+      <div class="swiper" id="swiper-nav">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a class="active" href="">Home</a></div>
+          <div class="swiper-slide"><a href="">Anime</a></div>
+          <div class="swiper-slide"><a href="">Series</a></div>
+          <div class="swiper-slide"><a href="">Original</a></div>
+          <div class="swiper-slide"><a href="">Music</a></div>
+          <div class="swiper-slide"><a href="">Dance</a></div>
+          <div class="swiper-slide"><a href="">Drama</a></div>
+          <div class="swiper-slide"><a href="">Films</a></div>
+          <div class="swiper-slide"><a href="">Docs</a></div>
+          <div class="swiper-slide"><a href="">Gaming</a></div>
+          <div class="swiper-slide"><a href="">Ideas</a></div>
+          <div class="swiper-slide"><a href="">Food</a></div>
+          <div class="swiper-slide"><a href="">Tech</a></div>
+          <div class="swiper-slide"><a href="">Fun</a></div>
+          <div class="swiper-slide"><a href="">Live</a></div>
+          <div class="swiper-slide"><a href="">Columns</a></div>
+          <div class="swiper-slide"><a href="">News</a></div>
+          <div class="swiper-slide"><a href="">Events</a></div>
+          <div class="swiper-slide"><a href="">Courses</a></div>
+        </div>
+      </div>
+      <!-- swiper-nav ends -->
+    </nav>
+    <!-- m-nav ends -->
+    <!-- m-main starts -->
+    <main class="m-main">
+      <!-- m-banner starts -->
+      <section class="m-banner">
+        <!-- swiper-banner starts -->
+        <div class="swiper" id="swiper-banner">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="https://picsum.photos/712/236?random=1" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://picsum.photos/712/236?random=2" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://picsum.photos/712/236?random=3" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- swiper-banner ends -->
+      </section>
+      <!-- m-banner ends -->
+      <!-- m-menu starts -->
+      <nav class="m-menu">
+        <ul>
+          <li>
+            <a href="">
+              <div><img src="images/logo/anime.png" alt="Series" /></div>
+              <p>Series</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/game.png" alt="Gaming" /></div>
+              <p>Gaming</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/new-show.png" alt="New Shows" /></div>
+              <p>Shows</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/life.png" alt="Lifestyle" /></div>
+              <p>Life</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/health.png" alt="Health" /></div>
+              <p>Health</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/comedy.png" alt="Comedy" /></div>
+              <p>Comedy</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/food.png" alt="Food" /></div>
+              <p>Food</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/science.png" alt="Tech" /></div>
+              <p>Science</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/camera.png" alt="Photography" /></div>
+              <p>Photos</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div><img src="images/logo/fitness.png" alt="Sports" /></div>
+              <p>Sports</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- m-menu ends -->
+      <!-- m-recommend starts -->
+      <section class="m-recommend">
+        <ul class="m-recommend-tab">
+          <li class="active" data-index="0">Trending</li>
+          <li data-index="1">Latest</li>
+          <li data-index="2">For You</li>
+        </ul>
+        <div class="m-recommend-content">
+          <div class="m-recommend-list active">
+            <!-- swiper-recommend1 starts -->
+            <div class="swiper swiper-recommend" id="swiper-recommend1">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=11"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=12"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=13"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=14"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=15"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=16"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+              </div>
+            </div>
+            <!-- swiper-recommend1 ends -->
+          </div>
+          <div class="m-recommend-list">
+            <!-- swiper-recommend2 starts -->
+            <div class="swiper swiper-recommend" id="swiper-recommend2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=21"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=22"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=23"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=24"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=25"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=26"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+              </div>
+            </div>
+            <!-- swiper-recommend2 ends -->
+          </div>
+          <div class="m-recommend-list">
+            <!-- swiper-recommend3 starts -->
+            <div class="swiper swiper-recommend" id="swiper-recommend3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=31"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=32"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=33"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=34"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=35"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+                <div class="swiper-slide">
+                  <!-- common-list-starts -->
+                  <div class="common-list">
+                    <a href="">
+                      <img
+                        src="https://picsum.photos/1000/300?random=36"
+                        alt=""
+                      />
+                      <div class="mask">
+                        <div class="common-list-play">
+                          <span class="icon-play"></span>
+                          <i>190.4 M</i>
+                        </div>
+                        <div class="common-list-info">
+                          <span class="icon-info"></span>
+                          <i>6000</i>
+                        </div>
+                      </div>
+                    </a>
+                    <p class="common-list-title">
+                      <a href=""
+                        >Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque nostrum saepe corrupti voluptates vitae
+                        suscipit, dicta repudiandae adipisci optio
+                        repellendus.</a
+                      >
+                    </p>
+                  </div>
+                  <!-- common-list-ends -->
+                </div>
+              </div>
+            </div>
+            <!-- swiper-recommend3 ends -->
+          </div>
+        </div>
+      </section>
+      <!-- m-recommend ends -->
+      <!-- m-hot starts -->
+      <section class="m-hot">
+        <ul>
+          <li>
+            <a href="">
+              <div class="m-hot-img">
+                <img src="https://picsum.photos/152?random=1" alt="" />
+              </div>
+              <div class="m-hot-text">
+                <div class="m-hot-title">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
+                  doloribus fuga molestias quas dignissimos excepturi
+                  accusantium libero mollitia? Omnis, vero!
+                </div>
+                <div class="m-hot-desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Laborum corrupti eaque omnis magnam ducimus ullam ex quibusdam
+                  odit esse itaque.
+                </div>
+              </div>
+              <div class="m-hot-play">
+                <div class="icon-play">
+                  <img src="./images/logo/play.png" alt="" />
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="m-hot-img">
+                <img src="https://picsum.photos/152?random=1" alt="" />
+              </div>
+              <div class="m-hot-text">
+                <div class="m-hot-title">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
+                  doloribus fuga molestias quas dignissimos excepturi
+                  accusantium libero mollitia? Omnis, vero!
+                </div>
+                <div class="m-hot-desc">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Laborum corrupti eaque omnis magnam ducimus ullam ex quibusdam
+                  odit esse itaque.
+                </div>
+              </div>
+              <div class="m-hot-play">
+                <div class="icon-play">
+                  <img src="./images/logo/play.png" alt="" />
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- m-hot ends -->
+      <!-- m-focus starts -->
+      <section class="m-focus">
+        <div class="m-focus-title">
+          <span class="title-text">Recently View</span>
+          <a href=""
+            ><span>View More</span>
+            <span class="img-wrapper"
+              ><img src="./images/logo/right.png" alt="" /></span
+          ></a>
+        </div>
+        <div class="m-focus-content">
+          <!-- swiper-focus starts -->
+          <div class="swiper" id="swiper-focus">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=1" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=2" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=3" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=4" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=5" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=6" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=7" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=8" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=9" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=10" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=11" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=12" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a href="#"
+                  ><div class="m-focus-img">
+                    <img src="https://picsum.photos/340/456?random=13" alt="" />
+                  </div>
+                  <p class="m-focus-desc">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Sapiente doloribus labore optio corporis suscipit cupiditate
+                    architecto quae totam enim quas.
+                  </p></a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- swiper-focus ends -->
+        </div>
+      </section>
+      <!-- m-focus ends -->
+      <!-- m-view-list starts -->
+      <section class="m-view-list">
+        <ul>
+          <li>
+            <!-- common-list-starts -->
+            <div class="common-list">
+              <a href="">
+                <img src="https://picsum.photos/1000/300?random=41" alt="" />
+                <div class="mask">
+                  <div class="common-list-play">
+                    <span class="icon-play"></span>
+                    <i>190.4 M</i>
+                  </div>
+                  <div class="common-list-info">
+                    <span class="icon-info"></span>
+                    <i>6000</i>
+                  </div>
+                </div>
+              </a>
+              <p class="common-list-title">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque nostrum saepe corrupti voluptates vitae suscipit, dicta
+                  repudiandae adipisci optio repellendus.</a
+                >
+              </p>
+            </div>
+            <!-- common-list-ends -->
+          </li>
+          <li>
+            <!-- common-list-starts -->
+            <div class="common-list">
+              <a href="">
+                <img src="https://picsum.photos/1000/300?random=42" alt="" />
+                <div class="mask">
+                  <div class="common-list-play">
+                    <span class="icon-play"></span>
+                    <i>190.4 M</i>
+                  </div>
+                  <div class="common-list-info">
+                    <span class="icon-info"></span>
+                    <i>6000</i>
+                  </div>
+                </div>
+              </a>
+              <p class="common-list-title">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque nostrum saepe corrupti voluptates vitae suscipit, dicta
+                  repudiandae adipisci optio repellendus.</a
+                >
+              </p>
+            </div>
+            <!-- common-list-ends -->
+          </li>
+          <li>
+            <!-- common-list-starts -->
+            <div class="common-list">
+              <a href="">
+                <img src="https://picsum.photos/1000/300?random=43" alt="" />
+                <div class="mask">
+                  <div class="common-list-play">
+                    <span class="icon-play"></span>
+                    <i>190.4 M</i>
+                  </div>
+                  <div class="common-list-info">
+                    <span class="icon-info"></span>
+                    <i>6000</i>
+                  </div>
+                </div>
+              </a>
+              <p class="common-list-title">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque nostrum saepe corrupti voluptates vitae suscipit, dicta
+                  repudiandae adipisci optio repellendus.</a
+                >
+              </p>
+            </div>
+            <!-- common-list-ends -->
+          </li>
+          <li>
+            <!-- common-list-starts -->
+            <div class="common-list">
+              <a href="">
+                <img src="https://picsum.photos/1000/300?random=44" alt="" />
+                <div class="mask">
+                  <div class="common-list-play">
+                    <span class="icon-play"></span>
+                    <i>190.4 M</i>
+                  </div>
+                  <div class="common-list-info">
+                    <span class="icon-info"></span>
+                    <i>6000</i>
+                  </div>
+                </div>
+              </a>
+              <p class="common-list-title">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque nostrum saepe corrupti voluptates vitae suscipit, dicta
+                  repudiandae adipisci optio repellendus.</a
+                >
+              </p>
+            </div>
+            <!-- common-list-ends -->
+          </li>
+          <li>
+            <!-- common-list-starts -->
+            <div class="common-list">
+              <a href="">
+                <img src="https://picsum.photos/1000/300?random=45" alt="" />
+                <div class="mask">
+                  <div class="common-list-play">
+                    <span class="icon-play"></span>
+                    <i>190.4 M</i>
+                  </div>
+                  <div class="common-list-info">
+                    <span class="icon-info"></span>
+                    <i>6000</i>
+                  </div>
+                </div>
+              </a>
+              <p class="common-list-title">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque nostrum saepe corrupti voluptates vitae suscipit, dicta
+                  repudiandae adipisci optio repellendus.</a
+                >
+              </p>
+            </div>
+            <!-- common-list-ends -->
+          </li>
+          <li>
+            <!-- common-list-starts -->
+            <div class="common-list">
+              <a href="">
+                <img src="https://picsum.photos/1000/300?random=46" alt="" />
+                <div class="mask">
+                  <div class="common-list-play">
+                    <span class="icon-play"></span>
+                    <i>190.4 M</i>
+                  </div>
+                  <div class="common-list-info">
+                    <span class="icon-info"></span>
+                    <i>6000</i>
+                  </div>
+                </div>
+              </a>
+              <p class="common-list-title">
+                <a href=""
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque nostrum saepe corrupti voluptates vitae suscipit, dicta
+                  repudiandae adipisci optio repellendus.</a
+                >
+              </p>
+            </div>
+            <!-- common-list-ends -->
+          </li>
+        </ul>
+      </section>
+      <!-- m-view-list ends -->
+    </main>
+    <!-- m-main ends -->
+    <!-- m-tabbar starts -->
+    <footer class="m-tabbar">
+      <ul>
+        <li>
+          <a href="#"
+            ><div class="m-tabbar-img">
+              <img src="./images/logo/home.png" alt="" />
+            </div>
+            <p>Home</p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><div class="m-tabbar-img">
+              <img src="./images/logo/status.png" alt="" />
+            </div>
+            <p>Status</p></a
+          >
+        </li>
+        <li class="create">
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"
+            ><div class="m-tabbar-img">
+              <img src="./images/logo/buy.png" alt="" />
+            </div>
+            <p class="vip"><i>VIP Cart</i></p></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><div class="m-tabbar-img">
+              <img src="./images/logo/personal.png" alt="" />
+            </div>
+            <p>Me</p></a
+          >
+        </li>
+      </ul>
+    </footer>
+    <!-- m-tabbar ends -->
+    <script type="module" src="./js/index.js"></script>
+    <script></script>
+  </body>
+</html>
