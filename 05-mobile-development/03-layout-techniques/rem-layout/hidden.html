@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hidden</title>
+    <style>
+      #item1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+
+      #item2,
+      #item3 {
+        width: 200px;
+        height: 200px;
+        display: none;
+
+        /* Note: The element is still occupying the space. */
+        /* visibility: hidden; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="item1"></div>
+    <div id="item2"></div>
+    <div id="item3"></div>
+    <script>
+      const item1 = document.getElementById("item1");
+      const item2 = document.getElementById("item2");
+      const item3 = document.getElementById("item3");
+      /* Those with display: none has clientWidth = 0 */
+      console.log(item1.clientWidth);
+      console.log(item2.clientWidth);
+      console.log(item3.clientWidth);
+    </script>
+  </body>
+</html>

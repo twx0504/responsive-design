@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Line Height Issue</title>
+    <style>
+      .title {
+        width: 300px;
+        font-size: 24px;
+        /* 24 * 1.2 = 28.8px */
+        /* Show only two rows */
+        /* Problem: Different browsers handles the decimal places differently. */
+        /* Example: Some browser rounds up >0.75, some is different. */
+        /* height: 57.6px; */
+        /* Solution: Make it integer */
+        height: 58px;
+        overflow: hidden;
+
+        /* What exactly is the value of "normal"? */
+        /* Depending on font family */
+        /* line-height: normal; */
+        line-height: 1.2;
+      }
+
+      .title1 {
+        background-color: skyblue;
+      }
+
+      .title2 {
+        background-color: tomato;
+        /* Note: Line height > 1.2 potentially */
+        font-family: Microsoft Yahei;
+      }
+
+      .title3 {
+        background-color: greenyellow;
+
+        /* Problem 1: Setting font-size < 12px, the font-size still stays 12px, this may make title height too small. */
+        font-size: 12px;
+        /* line height = 12 * 1.2 = 14.4 */
+        /* Remaining Space = (14.4 - 12) / 2 = 1.2 */
+        /* Problem 2: Decimal place problem. */
+        /* 1.2 will be treated as 1px or 1.5px or 2px on different mobile device browsers?  */
+
+        /* Conclusion: line-height: 1.2 contains hidden bugs that may cause UI inconsistency. Use with cautious. */
+        line-height: 1.2;
+        height: 28.8px;
+      }
+
+      /* Solution / Standard:
+        - use line-height: 1.5; OR
+        - use line-height: normal; but liaise with the designer how big is normal.
+        - 
+      */
+    </style>
+  </head>
+  <body>
+    <div class="title title1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor maiores
+      odio earum, quae esse ratione harum magnam veniam cumque.
+    </div>
+    <div class="title title2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor maiores
+      odio earum, quae esse ratione harum magnam veniam cumque.
+    </div>
+    <div class="title title3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor maiores
+      odio earum, quae esse ratione harum magnam veniam cumque.
+    </div>
+  </body>
+</html>

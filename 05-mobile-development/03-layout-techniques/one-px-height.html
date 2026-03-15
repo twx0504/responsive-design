@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Pixel - height</title>
+    <style>
+      .box {
+        margin: 50px;
+      }
+      .box1 {
+        height: 1px;
+        background-color: red;
+      }
+
+      /* On Ipad Safari  */
+      /* 0.75px and above rendered as 1px */
+      .box2 {
+        height: 0.75px;
+        background-color: red;
+      }
+
+      /* < 0.75px rendered as 0.5px */
+      .box3 {
+        height: 0.74px;
+        background-color: red;
+      }
+      .box4 {
+        height: 0.5px;
+        background-color: red;
+      }
+      .box5 {
+        height: 0.4px;
+        background-color: red;
+      }
+
+      /* < 0.3px 
+        - 0.3px & 0.1px rendered as 0px
+        - 0.2px renders as 0.5px?!
+      */
+
+      .box6 {
+        height: 0.3px;
+        background-color: red;
+      }
+      .box7 {
+        height: 0.2px;
+        background-color: red;
+      }
+      .box8 {
+        height: 0.1px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    1px:
+    <div class="box box1"></div>
+    0.75px:
+    <div class="box box2"></div>
+    0.74px:
+    <div class="box box3"></div>
+    0.5px:
+    <div class="box box4"></div>
+    0.4px:
+    <div class="box box5"></div>
+    0.3px:
+    <div class="box box6"></div>
+    0.2px:
+    <div class="box box7"></div>
+    0.1px:
+    <div class="box box8"></div>
+  </body>
+</html>

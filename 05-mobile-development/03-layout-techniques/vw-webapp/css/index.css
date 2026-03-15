@@ -1,7 +1,7 @@
 /* m-header */
 .m-header {
-  height: 0.6667rem;
-  margin: 0 0.2533rem 0.2933rem 0.3867rem;
+  height: 6.667vw;
+  margin: 0 2.533vw 2.933vw 3.867vw;
   display: flex;
   align-items: center;
 }
@@ -12,64 +12,64 @@
 
 .m-header a span {
   display: block;
-  width: 3.3333rem;
-  height: 0.64rem;
+  width: 33.333vw;
+  height: 6.4vw;
   text-align: center;
-  line-height: 0.64rem;
+  line-height: 6.4vw;
   background-color: #9d9d9d;
   color: #fff;
-  border-radius: 0.0667rem;
+  border-radius: 0.667vw;
 }
 
 .m-header a.search {
-  margin-right: 0.6533rem;
+  margin-right: 6.533vw;
 }
 
 .m-header a.login {
-  margin-right: 0.56rem;
+  margin-right: 5.6vw;
 }
 
 .m-header a.search img {
-  width: 0.5067rem;
+  width: 5.067vw;
 }
 
 .m-header a.logo img,
 .m-header a.login img {
-  width: 0.6133rem;
+  width: 6.133vw;
 }
 
 .m-header a.download {
-  width: 2.56rem;
-  height: 0.64rem;
+  width: 25.6vw;
+  height: 6.4vw;
   background-color: #ff9f00;
   color: #fff;
   text-align: center;
-  line-height: 0.64rem;
-  /* font-size: 0.32rem; */
-  border-radius: 0.1067rem;
+  line-height: 6.4vw;
+  /* font-size: 3.2vw; */
+  border-radius: 1.067vw;
 }
 
 /* m-nav */
 .m-nav {
-  height: 0.9867rem;
-  border-bottom: 0.0133rem solid #f3f3f3;
+  height: 9.867vw;
+  border-bottom: 0.133vw solid #f3f3f3;
 }
 
 #swiper-nav .swiper-slide {
-  height: 0.9867rem;
+  height: 9.867vw;
   /* Do not add border-bottom here, .swiper has overflow:hidden; */
 }
 
 #swiper-nav .swiper-slide a {
   /* Make sure the <a> width is the same as its content. Use inline-block instead of block */
   display: inline-block;
-  /* Exclude 0.0267rem border-bottom */
-  height: 0.96rem;
-  line-height: 0.96rem;
+  /* Exclude 0.267vw border-bottom */
+  height: 9.6vw;
+  line-height: 9.6vw;
   /* Prevent reflow - all <a> element has a transparent border-bottom */
-  border-bottom: 0.0267rem solid transparent;
+  border-bottom: 0.267vw solid transparent;
   color: #6b6b6b;
-  font-size: 0.3733rem;
+  font-size: 3.733vw;
 }
 
 #swiper-nav .swiper-slide a.active {
@@ -79,31 +79,31 @@
 }
 
 #swiper-nav .swiper-wrapper {
-  padding-left: 0.4rem;
+  padding-left: 4vw;
 }
 
 /* m-main */
 
 .m-main {
-  margin: 0.2533rem 0.2533rem 0.24rem;
-  padding-bottom: 1.3333rem;
+  margin: 2.533vw 2.533vw 2.4vw;
+  padding-bottom: 13.333vw;
 }
 
 /* m-banner */
 
 .m-banner {
-  width: 9.4933rem;
-  height: 3.1467rem;
+  width: 94.933vw;
+  height: 31.467vw;
 }
 
 #swiper-banner {
-  border-radius: 0.1067rem;
+  border-radius: 1.067vw;
 }
 
 #swiper-banner .swiper-pagination-bullet {
   /* Reset swiper pagination bullets */
-  width: 0.1733rem;
-  height: 0.08rem;
+  width: 1.733vw;
+  height: 0.8vw;
   border-radius: 0;
   background-color: #fff;
   opacity: 0.4;
@@ -118,10 +118,10 @@
 .m-menu {
   box-sizing: border-box;
   width: 100%;
-  height: 4.1867rem;
-  border-radius: 0.1067rem;
-  margin-top: 0.24rem;
-  padding: 0.4rem 0 0.4133rem;
+  height: 41.867vw;
+  border-radius: 1.067vw;
+  margin-top: 2.4vw;
+  padding: 4vw 0 4.133vw;
   background-color: #f7f7f7;
 }
 
@@ -146,8 +146,8 @@
 
 .m-menu ul li a div {
   position: relative;
-  width: 0.8533rem;
-  height: 0.8533rem;
+  width: 8.533vw;
+  height: 8.533vw;
   margin: 0 auto;
   border-radius: 50%;
 }
@@ -213,31 +213,31 @@
 }
 
 .m-menu ul li a p {
-  padding-top: 0.0533rem;
-  letter-spacing: 0.0667rem;
+  padding-top: 0.533vw;
+  letter-spacing: 0.667vw;
 }
 
 /* m-recommend */
 .m-recommend {
-  margin-top: 0.24rem;
+  margin-top: 2.4vw;
   background-color: #f7f7f7;
-  border-radius: 0.1067rem;
+  border-radius: 1.067vw;
 }
 
 .m-recommend .m-recommend-tab {
   display: flex;
   align-items: center;
-  height: 1.3867rem;
+  height: 13.867vw;
 }
 .m-recommend .m-recommend-tab li {
-  width: 1.6rem;
-  height: 0.56rem;
-  margin: 0 0.2267rem 0 0.16rem;
+  width: 16vw;
+  height: 5.6vw;
+  margin: 0 2.267vw 0 1.6vw;
   text-align: center;
-  line-height: 0.56rem;
+  line-height: 5.6vw;
   color: #6c6c6c;
-  border: 0.0133rem solid #6b6b6b;
-  border-radius: 0.2933rem;
+  border: 0.133vw solid #6b6b6b;
+  border-radius: 2.933vw;
 }
 
 .m-recommend .m-recommend-tab li.active {
@@ -245,7 +245,7 @@
   border-color: #ff9f00;
 }
 .m-recommend .m-recommend-content {
-  height: 3.9467rem;
+  height: 39.467vw;
 }
 
 .m-recommend .m-recommend-content .m-recommend-list {
@@ -267,11 +267,11 @@
 .common-list a {
   position: relative;
   display: block;
-  height: 2.5867rem; /* Fix the height */
+  height: 25.867vw; /* Fix the height */
 }
 
 .common-list a img {
-  border-radius: 0.1067rem;
+  border-radius: 1.067vw;
 }
 
 .common-list a .mask {
@@ -283,9 +283,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 0.7467rem;
-  padding-left: 0.1867rem;
-  padding-right: 0.16rem;
+  height: 7.467vw;
+  padding-left: 1.867vw;
+  padding-right: 1.6vw;
   background-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.7),
@@ -301,8 +301,8 @@
 
 .common-list .mask .common-list-play span,
 .common-list .mask .common-list-info span {
-  width: 0.4133rem;
-  height: 0.36rem;
+  width: 4.133vw;
+  height: 3.6vw;
 }
 
 .common-list .mask .common-list-play span {
@@ -318,13 +318,13 @@
 .common-list .mask .common-list-play i,
 .common-list .mask .common-list-info i {
   color: #fff;
-  margin-left: 0.16rem;
+  margin-left: 1.6vw;
 }
 
 .common-list .common-list-title {
-  height: 0.76rem;
+  height: 7.6vw;
   line-height: 1.2;
-  margin-top: 0.1867rem;
+  margin-top: 1.867vw;
 }
 
 .common-list .common-list-title a {
@@ -347,15 +347,15 @@
 /* m-hot */
 .m-hot {
   background-color: #f7f7f7;
-  border-radius: 0.1067rem;
-  margin-top: 0.24rem;
-  padding: 0 0.2667rem;
+  border-radius: 1.067vw;
+  margin-top: 2.4vw;
+  padding: 0 2.667vw;
 }
 
 .m-hot ul li {
-  height: 1.0133rem;
-  padding: 0.2667rem 0;
-  border-bottom: 0.0133rem solid #e6e6e6;
+  height: 10.133vw;
+  padding: 2.667vw 0;
+  border-bottom: 0.133vw solid #e6e6e6;
 }
 
 .m-hot ul li:last-child {
@@ -369,24 +369,24 @@
 }
 
 .m-hot ul li a .m-hot-img {
-  width: 1.0133rem;
-  height: 1.0133rem;
+  width: 10.133vw;
+  height: 10.133vw;
   /* Do not shrink - default: 1 */
   flex-shrink: 0;
 }
 
 .m-hot ul li a .m-hot-img img {
-  border-radius: 0.1067rem;
+  border-radius: 1.067vw;
 }
 
 .m-hot ul li a .icon-play {
-  width: 1.0133rem;
-  height: 1.0133rem;
+  width: 10.133vw;
+  height: 10.133vw;
   /* Do not shrink - default: 1 */
   flex-shrink: 0;
   background-image: url("../images/logo/play.png");
   background-position: center;
-  background-size: 0.5867rem;
+  background-size: 5.867vw;
   background-repeat: no-repeat;
 }
 
@@ -394,10 +394,10 @@
   /* Expand and take up space - default: 0 */
   flex-grow: 1;
   height: 100%;
-  margin: 0 0.2rem;
+  margin: 0 2vw;
   /* Create BFC - No more affecting the element next to this element */
   overflow: hidden;
-  font-size: 0.3467rem;
+  font-size: 3.467vw;
 }
 
 .m-hot ul li a .m-hot-text .m-hot-title,
@@ -412,26 +412,26 @@
   color: #ff9f00;
 }
 .m-hot ul li a .m-hot-text .m-hot-desc {
-  margin-top: 0.24rem;
+  margin-top: 2.4vw;
 }
 /* m-focus */
 
 .m-focus {
   background-color: #f7f7f7;
-  border-radius: 0.1067rem;
-  margin-top: 0.24rem;
+  border-radius: 1.067vw;
+  margin-top: 2.4vw;
 }
 
 .m-focus .m-focus-title {
   display: flex;
-  height: 1.0933rem;
+  height: 10.933vw;
   align-items: center;
 }
 
 .m-focus .m-focus-title span.title-text {
   flex-grow: 1;
-  font-size: 0.4267rem;
-  margin-left: 0.1333rem;
+  font-size: 4.267vw;
+  margin-left: 1.333vw;
 }
 
 .m-focus .m-focus-title a {
@@ -439,23 +439,23 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin-right: 0.2667rem;
+  margin-right: 2.667vw;
 }
 
 .m-focus .m-focus-title a .img-wrapper {
-  width: 0.1467rem;
-  height: 0.2667rem;
-  margin-left: 0.2533rem;
+  width: 1.467vw;
+  height: 2.667vw;
+  margin-left: 2.533vw;
 }
 
 .m-focus .m-focus-content {
   width: 100%;
-  height: 4.28rem;
+  height: 42.8vw;
 }
 
 #swiper-focus .swiper-slide {
   /* fix the slide width, let swiper decides how many slides to be presented. */
-  width: 2.2667rem;
+  width: 22.667vw;
 }
 
 .m-focus .m-focus-content .swiper-slide a {
@@ -464,15 +464,15 @@
 
 .m-focus .m-focus-content .swiper-slide a .m-focus-img {
   width: 100%;
-  height: 3.04rem;
+  height: 30.4vw;
 }
 
 .m-focus .m-focus-content .swiper-slide a .m-focus-img img {
-  border-radius: 0.1067rem;
+  border-radius: 1.067vw;
 }
 
 .m-focus .m-focus-content .swiper-slide a .m-focus-desc {
-  margin-top: 0.1707rem;
+  margin-top: 1.707vw;
   line-height: 1.2;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -484,7 +484,7 @@
 
 /* m-view-list */
 .m-view-list {
-  margin-top: 0.24rem;
+  margin-top: 2.4vw;
 }
 
 .m-view-list ul {
@@ -494,8 +494,8 @@
 }
 
 .m-view-list ul li {
-  width: 4.6133rem;
-  margin-bottom: 0.3733rem;
+  width: 46.133vw;
+  margin-bottom: 3.733vw;
 }
 
 /* tabbar */
@@ -505,7 +505,7 @@
   bottom: 0;
   z-index: 999;
   width: 100%;
-  height: 1.3333rem;
+  height: 13.333vw;
   background-color: #fff;
   /* For non-ios phones */
   padding: 0;
@@ -518,11 +518,11 @@
 .m-tabbar ul {
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem 0.5867rem 0;
+  padding: 2vw 5.867vw 0;
 }
 
 .m-tabbar ul li {
-  width: 0.64rem;
+  width: 6.4vw;
 }
 
 .m-tabbar ul li a {
@@ -533,34 +533,34 @@
 }
 
 .m-tabbar ul li.create {
-  width: 1.04rem;
-  height: 1.0133rem;
+  width: 10.4vw;
+  height: 10.133vw;
 }
 
 .m-tabbar ul li.create a {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 0.3733rem;
-  background: #ff9f00 url("../images/logo/plus.png") no-repeat center/0.5333rem
-    0.4933rem;
+  border-radius: 3.733vw;
+  background: #ff9f00 url("../images/logo/plus.png") no-repeat center/5.333vw
+    4.933vw;
 }
 .m-tabbar .m-tabbar-img {
-  width: 0.4933rem;
-  height: 0.4933rem;
+  width: 4.933vw;
+  height: 4.933vw;
 }
 
 .m-tabbar ul li a p {
-  margin-top: 0.0533rem;
+  margin-top: 0.533vw;
 }
 
 .m-tabbar ul li a p.vip {
-  margin-top: 0.0533rem;
+  margin-top: 0.533vw;
   position: relative;
 }
 
 .m-tabbar ul li a p.vip i {
-  width: 1.3333rem;
+  width: 13.333vw;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

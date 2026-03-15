@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Pixel - border</title>
+    <style>
+      .box {
+        margin: 50px;
+      }
+      .box1 {
+        border-bottom: 1px solid red;
+      }
+
+      /* On Ipad Safari: 0.75px and below seems like 0.5px */
+      .box2 {
+        border-bottom: 0.75px solid red;
+      }
+      .box3 {
+        border-bottom: 0.74px solid red;
+      }
+      .box4 {
+        border-bottom: 0.5px solid red;
+      }
+      .box5 {
+        border-bottom: 0.4px solid red;
+      }
+      .box6 {
+        border-bottom: 0.3px solid red;
+      }
+      .box7 {
+        border-bottom: 0.2px solid red;
+      }
+      .box8 {
+        border-bottom: 0.1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    1px:
+    <div class="box box1"></div>
+    0.75px:
+    <div class="box box2"></div>
+    0.74px:
+    <div class="box box3"></div>
+    0.5px:
+    <div class="box box4"></div>
+    0.4px:
+    <div class="box box5"></div>
+    0.3px:
+    <div class="box box6"></div>
+    0.2px:
+    <div class="box box7"></div>
+    0.1px:
+    <div class="box box8"></div>
+  </body>
+</html>
