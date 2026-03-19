@@ -1,1 +1,372 @@
-/* Project Homepage CSS */
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 20px;
+  background-color: #f3f5f9;
+}
+
+.header .header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.header .header-content a.logo {
+  width: 97px;
+  margin: 0 22px 0 32px;
+}
+
+.header .header-content .nav_list {
+  border-radius: 8px;
+}
+
+.header .header-content ul li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.header .header-content ul li a:hover {
+  background-color: #efe8ff;
+  color: #9c71fc;
+  border-radius: 10px;
+}
+
+.header .header-content .icon-nav {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.header .header-content .icon-nav img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+}
+.header .header-content .icon-nav:active {
+  background-color: #9c71fc;
+}
+
+
+/* Menu */
+.menu {
+  width: 260px;
+  padding: 20px;
+  /* padding-bottom: 0; */
+  position: fixed;
+  /* top: 0;
+  bottom: 10px; */
+  top: 115px;
+  bottom: 20px;
+  left: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.menu .menu-item {
+  height: 40px;
+  overflow: hidden;
+  transition: height 1s;
+}
+
+/* .menu .menu-item:hover{
+  height: 200px;
+} */
+
+.menu .menu-item .menu-item-title {
+  display: flex;
+  /* At < 1400px screen, the background image right-logo may appear. */
+  /* Add the width so that the background image is not visible on screen. */
+  /* Better add .menu to have overflow: hidden; at <1400px media query */
+  width: 220px;
+  height: 40px;
+  align-items: center;
+  color: #5b5b5b;
+  font-size: 16px;
+  background: url("../images/right.png") no-repeat right center/ 16px;
+  cursor: pointer;
+}
+
+.menu .menu-item .menu-item-active {
+  background-color: #f77080;
+  color: #fff;
+  background-image: url("../images/right-active.png");
+}
+
+.menu .menu-item-title:hover {
+  color: #f77080;
+}
+
+.menu .menu-item .menu-item-active {
+  color: #fff;
+}
+
+.menu .menu-item .menu-item-title .icon-menu {
+  font-size: 18px;
+  margin-left: 7px;
+  margin-right: 12px;
+}
+
+.menu .menu-item ul {
+  padding-top: 11px;
+}
+
+.menu .menu-item ul li {
+  /* font-size: 14px + bottom gap: 25px */
+  height: 39px;
+  line-height: 39px;
+  background: url("../images/dot.png") no-repeat 13px center/ 14px;
+}
+
+.menu .menu-item ul li a {
+  display: block;
+  /* Note: Adding padding-left to li or li a is different. */
+  padding-left: 40px;
+  /* Fix text-align in a inside li */
+  text-align: left;
+}
+
+/* Main */
+/* Responsive part: We will not fix the width, and height in this section */
+.main {
+  /* Left & Right margin each subtracts 10px */
+  margin: 115px 10px 50px 290px;
+  background-color: #f3f5f9;
+}
+
+.main-row {
+  display: flex;
+  /* Make sure the flex item can wrap onto multilines. */
+  flex-wrap: wrap;
+}
+
+.main-row .col {
+  /* min-height: 200px; */
+  /* The subtracted padding is added to padding-left & [adding-right of col */
+  padding: 10px;
+}
+
+/* Fix the upper row gap of the first-row col item padding-top issue */
+.main-row .col-gap-r1 {
+  padding-top: 0;
+}
+
+/* Fix the upper row gap of the second-row col item padding-top issue */
+.main-row .col-gap-r2 {
+  padding-top: 0;
+}
+
+.main-row .col .col-content {
+  background-color: #fff;
+  height: 100%;
+  border-radius: 10px;
+  padding: 25px;
+  font-size: 16px;
+}
+
+.main-row .col .col-content .content-title {
+  font-size: 18px;
+  color: #7d7d7d;
+  margin-bottom: 25px;
+}
+
+/* Main-row-1 */
+.main-row-1 .col .col-content div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-row-1 .col .col-content div span {
+  color: #959595;
+}
+
+.main-row-1 .col .col-content div strong {
+  color: #5b5b5b;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.main-row-1 .col .col-content a {
+  color: #9c71fc;
+}
+
+/* Main-row-2 */
+
+.table-wrapper {
+  /* Enable horizontal scrollbar if the table starts overflow. */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  padding-top: 10px;
+}
+
+.table .thead .tr,
+.table .tbody .tr {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+
+.table .thead {
+  margin-bottom: 10px;
+}
+.table .thead .tr .th {
+  font-weight: bold;
+  color: #5b5b5b;
+}
+
+.table .tbody {
+  color: #7d7d7d;
+}
+
+.main-row-2 .col .col-content .table .tbody .tr {
+  border-bottom: 1px solid #d5d5d5;
+  margin-bottom: 10px;
+}
+
+.table .thead .tr .th,
+.table .tbody .tr .td {
+  padding-right: 20px;
+}
+
+.table .thead .tr .th:last-child,
+.table .tbody .tr .td:last-child {
+  padding-right: 0px;
+}
+
+.table .thead .tr .th-col-2,
+.table .tbody .tr .td-col-2 {
+  /* flex-basis 0 - before flex-shrink and flex-grow takes effect */
+  /* Do not shrink and grow */
+  /* Allow col-2 to grow and shrink if needed */
+  flex: 1 1 0;
+  min-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.table .thead .tr .th-col-1,
+.table .tbody .tr .td-col-1 {
+  /* flex-basis 120px - before flex-shrink and flex-grow takes effect */
+  /* Do not shrink and grow */
+  flex: 0 0 120px;
+}
+.table .thead .tr .th-col-3,
+.table .tbody .tr .td-col-3,
+.table .thead .tr .th-col-4,
+.table .tbody .tr .td-col-4,
+.table .thead .tr .th-col-5,
+.table .tbody .tr .td-col-5 {
+  /* flex-basis 70px - before flex-shrink and flex-grow takes effect */
+  /* Do not shrink and grow */
+  flex: 0 0 70px;
+}
+
+.table .tbody .tr .td-col-1 {
+  display: flex;
+  align-items: center;
+}
+
+.table .tbody .tr .td-col-1 .img-wrapper {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+ul.common-ul {
+  padding: 10px 0;
+}
+
+ul.common-ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+ul.common-ul li .img-wrapper {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  background-image: url("../images/book.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px;
+  background-color: #e6dcfd;
+  border-radius: 8px;
+}
+
+ul.common-ul li .content-wrapper .desc {
+  color: #7d7d7d;
+}
+
+/* Main-row-3 */
+.main-row-3 .col .col-content-1 .img-wrapper {
+  margin-bottom: 20px;
+}
+.main-row-3 .col .col-content-1 p {
+  color: #7d7d7d;
+  text-align: justify;
+}
+
+.main-row-3 .col .col-content-2 .entries .entries-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.main-row-3 .col .col-content-2 .entries .entries-row .col {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  min-width: 100px;
+}
+
+.main-row-3 .col .col-content-2 .entries .entries-row .img-wrapper {
+  min-width: 40px;
+  min-height: 40px;
+  background-image: url("../images/book.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px;
+  background-color: #e6dcfd;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+/* Main-row-4 */
+.main-row-4 .col-content ul.common-ul li .content-wrapper .desc {
+  color: #c56e76;
+}
+
+/* Footer */
+.footer {
+  height: 50px;
+  position: relative;
+  z-index: 999;
+  background-color: #333;
+}
+
+.footer p {
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}

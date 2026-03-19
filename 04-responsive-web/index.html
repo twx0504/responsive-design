@@ -1,11 +1,632 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web App</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Media query's CSS goes last. -->
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <!-- header starts -->
+    <header class="header">
+      <div class="header-content">
+        <a href="" class="logo"><img src="./images/logo.png" alt="" /></a>
+        <span id="J_nav" class="icon-nav xxl-hide sm-show"
+          ><img src="./images/menu.png" alt=""
+        /></span>
+        <ul id="J_nav_list" class="nav_list xxl-flex sm-hide">
+          <li><a href="">Home</a></li>
+          <li><a href="">Admin</a></li>
+          <li><a href="">Ads</a></li>
+          <li><a href="">Flow</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Logs</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- header ends -->
+    <!-- menu starts -->
+    <nav id="J_menu" class="menu">
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title" data-is-shown="false">
+          <span class="icon-menu iconfont icon-management"></span>
+          Title
+        </div>
+        <ul>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+          <li><a href="">Lorem, ipsum.</a></li>
+        </ul>
+      </div>
+      <button id="J_collapse-button" class="xxl-hide xl-show">
+        <img src="./images/collapse-left.png" alt="" />
+      </button>
+    </nav>
+    <!-- menu ends -->
+    <!-- main starts -->
+    <main class="main">
+      <!-- main-row-1 starts -->
+      <div class="main-row main-row-1">
+        <div class="col col-gap-r1 col-xxl-3 col-lg-6 col-sm-12">
+          <div class="col-content">
+            <p class="content-title">Lorem ipsum</p>
+            <div><span>Lorem, ipsum.</span><strong>688</strong></div>
+            <a>More</a>
+          </div>
+        </div>
+        <div class="col col-gap-r1 col-sm-gap col-xxl-3 col-lg-6 col-sm-12">
+          <div class="col-content">
+            <p class="content-title">Lorem ipsum</p>
+            <div><span>Lorem, ipsum.</span><strong>688</strong></div>
+            <a>More</a>
+          </div>
+        </div>
+        <div class="col col-gap-r1 col-gap-r2 col-xxl-3 col-lg-6 col-sm-12">
+          <div class="col-content">
+            <p class="content-title">Lorem ipsum</p>
+            <div><span>Lorem, ipsum.</span><strong>688</strong></div>
+            <a>More</a>
+          </div>
+        </div>
+        <div class="col col-gap-r1 col-gap-r2 col-xxl-3 col-lg-6 col-sm-12">
+          <div class="col-content">
+            <p class="content-title">Lorem ipsum</p>
+            <div><span>Lorem, ipsum.</span><strong>688</strong></div>
+            <a>More</a>
+          </div>
+        </div>
+      </div>
+      <!-- main-row-1 ends -->
+      <!-- main-row-2 starts -->
+      <div class="main-row main-row-2">
+        <div class="col col-xxl-8 col-md-12">
+          <div class="col-content col-content-1">
+            <p class="content-title">Lorem ipsum</p>
+            <div class="table-wrapper">
+              <div class="table">
+                <div class="thead">
+                  <div class="tr">
+                    <div class="th th-col-1">Lorem1.</div>
+                    <div class="th th-col-2">Lorem.</div>
+                    <div class="th th-col-3">Lorem.</div>
+                    <div class="th th-col-4">Lorem.</div>
+                    <div class="th th-col-5">Lorem.</div>
+                  </div>
+                </div>
+                <div class="tbody">
+                  <div class="tr">
+                    <div class="td td-col-1">
+                      <div class="img-wrapper">
+                        <img src="./images/profile1.png" alt="" />
+                      </div>
+                      <span>Lorem.</span>
+                    </div>
+                    <div class="td td-col-2">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Sequi, libero?
+                    </div>
+                    <div class="td td-col-3">Lorem.</div>
+                    <div class="td td-col-4">Lorem.</div>
+                    <div class="td td-col-5">Lorem.</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td td-col-1">
+                      <div class="img-wrapper">
+                        <img src="./images/profile2.png" alt="" />
+                      </div>
+                      <span>Lorem.</span>
+                    </div>
+                    <div class="td td-col-2">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Sequi, libero?
+                    </div>
+                    <div class="td td-col-3">Lorem.</div>
+                    <div class="td td-col-4">Lorem.</div>
+                    <div class="td td-col-5">Lorem.</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td td-col-1">
+                      <div class="img-wrapper">
+                        <img src="./images/profile3.png" alt="" />
+                      </div>
+                      <span>Lorem.</span>
+                    </div>
+                    <div class="td td-col-2">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Sequi, libero?
+                    </div>
+                    <div class="td td-col-3">Lorem.</div>
+                    <div class="td td-col-4">Lorem.</div>
+                    <div class="td td-col-5">Lorem.</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td td-col-1">
+                      <div class="img-wrapper">
+                        <img src="./images/profile4.png" alt="" />
+                      </div>
+                      <span>Lorem.</span>
+                    </div>
+                    <div class="td td-col-2">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Sequi, libero?
+                    </div>
+                    <div class="td td-col-3">Lorem.</div>
+                    <div class="td td-col-4">Lorem.</div>
+                    <div class="td td-col-5">Lorem.</div>
+                  </div>
+                  <div class="tr">
+                    <div class="td td-col-1">
+                      <div class="img-wrapper">
+                        <img src="./images/profile5.png" alt="" />
+                      </div>
+                      <span>Lorem.</span>
+                    </div>
+                    <div class="td td-col-2">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Sequi, libero?
+                    </div>
+                    <div class="td td-col-3">Lorem.</div>
+                    <div class="td td-col-4">Lorem.</div>
+                    <div class="td td-col-5">Lorem.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-xxl-4 col-md-12">
+          <div class="col-content col-content-2">
+            <p class="content-title">Lorem ipsum</p>
+            <ul class="common-ul">
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">Lorem.</span>
+                    <span class="value">2000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">Lorem.</span>
+                    <span class="value">2000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">Lorem.</span>
+                    <span class="value">2000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">Lorem.</span>
+                    <span class="value">2000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">Lorem.</span>
+                    <span class="value">2000</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- main-row-2 ends -->
+      <!-- main-row-3 starts -->
+      <div class="main-row main-row-3">
+        <div class="col col-xxl-4 col-md-6 col-sm-12">
+          <div class="col-content col-content-1">
+            <p class="content-title">Lorem ipsum</p>
+            <div class="img-wrapper">
+              <img src="https://picsum.photos/300/170" alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor,
+              impedit placeat! Dolor, quis esse a placeat voluptates vitae ipsam
+              molestiae!
+            </p>
+          </div>
+        </div>
+        <div class="col col-xxl-8 col-md-6 col-sm-12">
+          <div class="col-content col-content-2">
+            <p class="content-title">Lorem ipsum</p>
+            <div class="entries">
+              <div class="entries-row">
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+                <div class="col col-xxl-3 col-md-6">
+                  <div class="img-wrapper"></div>
+                  <span>Lorem.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main-row-3 ends -->
+      <!-- main-row-4 starts -->
+      <div class="main-row main-row-4">
+        <div class="col col-xxl-4 col-md-6 col-sm-12">
+          <div class="col-content">
+            <p class="content-title">Lorem ipsum</p>
+            <ul class="common-ul">
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">$10000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">$10000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">$10000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">$10000</span>
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapper"></div>
+                <div class="content-wrapper">
+                  <p class="title">Lorem, ipsum dolor.</p>
+                  <p class="desc">
+                    <span class="field">$10000</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col col-xxl-4 col-md-6 col-sm-12">
+          <div class="col-content">
+            <p class="content-title">Lorem ipsum</p>
+            <div id="J_echarts1"></div>
+          </div>
+        </div>
+        <div class="col col-xxl-4 col-md-12">
+          <div class="col-content">
+            <p class="content-title">Lorem ipsum</p>
+            <div id="J_echarts2"></div>
+          </div>
+        </div>
+      </div>
+      <!-- main-row-4 ends -->
+    </main>
+    <!-- main ends -->
+    <!-- footer starts -->
+    <footer class="footer">
+      <p>Responsive Layout for Backend System</p>
+    </footer>
+    <!-- footer ends -->
+    <script>
+      const nav = document.getElementById("J_nav");
+      const navList = document.getElementById("J_nav_list");
+      const menu = document.getElementById("J_menu");
+      const menuTitles = document.querySelectorAll(
+        "#J_menu .menu-item .menu-item-title",
+      );
+      const collapseButton = document.getElementById("J_collapse-button");
+
+      let prevTitle = null;
+
+      nav.addEventListener("click", () => {
+        navList.classList.toggle("sm-flex");
+      });
+
+      menu.addEventListener("click", (e) => {
+        const target = e.target.closest("#J_menu .menu-item .menu-item-title");
+        if (target === null) return;
+
+        if (target.dataset.isShown === "false") {
+          // Make sure one menu is opened at a time
+          if (prevTitle && prevTitle !== target) {
+            hideSubMenu(prevTitle);
+          }
+          prevTitle = target;
+          showSubMenu(target);
+        } else if (target.dataset.isShown === "true") {
+          hideSubMenu(target);
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        const viewportWidth = document.documentElement.clientWidth;
+        if (viewportWidth > 1400) {
+          menu.style.width = "260px";
+          menuTitles.forEach((menuTitle) => {
+            menuTitle.style.height = "40px";
+          });
+        }
+        if (viewportWidth <= 1400) {
+          menu.style.width = "75px";
+          if (prevTitle) {
+            hideSubMenu(prevTitle);
+          }
+        }
+      });
+
+      collapseButton.addEventListener("click", () => {
+        const menuWidth = menu.clientWidth;
+        if (menuWidth < 100) {
+          expandMenu(menu);
+        } else {
+          collapseMenu(menu, menuTitles);
+          if (prevTitle) {
+            hideSubMenu(prevTitle);
+          }
+        }
+      });
+
+      function showSubMenu(menuTitle) {
+        const ulHeight = menuTitle.nextElementSibling.clientHeight;
+        const menuTitleHeight = menuTitle.clientHeight;
+        menuTitle.classList.add("menu-item-active");
+        menuTitle.parentElement.style.height = `${ulHeight + menuTitleHeight}px`;
+        menuTitle.dataset.isShown = "true";
+        expandMenu(menu);
+      }
+
+      function hideSubMenu(menuTitle) {
+        menuTitle.classList.remove("menu-item-active");
+        menuTitle.parentElement.style.height = `${menuTitle.clientHeight}px`;
+        menuTitle.dataset.isShown = "false";
+      }
+
+      function collapseMenu(menu) {
+        menu.style.width = "75px";
+      }
+
+      function expandMenu(menu) {
+        menu.style.width = "260px";
+      }
+
+      document.addEventListener("click", (e) => {
+        const target = e.target.closest(".menu");
+        const menuWidth = menu.clientWidth;
+        if (target !== null) return;
+        const viewportWidth = document.documentElement.clientWidth;
+        /* Screen width between 1300 - 1400, shrink the menu width. */
+        if (viewportWidth >= 1300 && viewportWidth < 1400) {
+          collapseMenu(menu);
+        }
+        /* Hide submenu */
+        menuTitles.forEach((menuTitle) => {
+          hideSubMenu(menuTitle);
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/echarts@6.0.0/dist/echarts.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        /* Echarts */
+        const myChart1 = echarts.init(document.getElementById("J_echarts1"));
+        const myChart2 = echarts.init(document.getElementById("J_echarts2"));
+        const option1 = {
+          title: {
+            text: "Weather Stats",
+            subtext: "Fake Data",
+            left: "center",
+          },
+          tooltip: {
+            trigger: "item",
+          },
+          legend: {
+            orient: "horizontal",
+            left: "center",
+            bottom: 0,
+            itemGap: 15,
+          },
+          series: [
+            {
+              name: "Access From",
+              type: "pie",
+              radius: "50%",
+              data: [
+                { value: 1048, name: "City A" },
+                { value: 735, name: "City B" },
+                { value: 580, name: "City C" },
+                { value: 484, name: "City D" },
+                { value: 300, name: "City E" },
+              ],
+              emphasis: {
+                itemStyle: {
+                  shadowBlur: 10,
+                  shadowOffsetX: 0,
+                  shadowColor: "rgba(0, 0, 0, 0.5)",
+                },
+              },
+            },
+          ],
+        };
+        const option2 = {
+          xAxis: {
+            type: "category",
+            data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          },
+          yAxis: {
+            type: "value",
+          },
+          series: [
+            {
+              data: [120, 200, 150, 80, 70, 110, 130],
+              type: "bar",
+            },
+          ],
+        };
+
+        myChart1.setOption(option1);
+        myChart2.setOption(option2);
+        /* Make echarts responsive */
+        window.addEventListener("resize", () => {
+          myChart1.resize();
+          myChart2.resize();
+        });
+      });
+    </script>
+  </body>
 </html>

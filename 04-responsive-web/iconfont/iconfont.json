@@ -1,0 +1,23 @@
+{
+  "id": "5141026",
+  "name": "responsive-webapp",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "109779",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "6238175",
+      "name": "management",
+      "font_class": "management",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    }
+  ]
+}

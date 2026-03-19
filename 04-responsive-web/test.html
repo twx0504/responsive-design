@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最新报名学员</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #f3f4f8;
+        --card-bg: #ffffff;
+        --border: #ebebf0;
+        --text-main: #1a1a2e;
+        --text-sub: #8888a0;
+        --text-muted: #b0b0c8;
+        --accent: #7c6ef5;
+        --accent-lt: #ede9ff;
+        --green: #22c78b;
+        --green-lt: #e3faf3;
+        --row-hover: #fafafd;
+        --avatar-ring: #e8e4ff;
+        --shadow: 0 4px 24px rgba(100, 90, 180, 0.08);
+        --radius: 16px;
+      }
+
+      body {
+        font-family: "DM Sans", "Noto Sans SC", sans-serif;
+        background: var(--bg);
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: clamp(16px, 4vw, 48px);
+      }
+
+      /* ── Card wrapper ── */
+      .card {
+        background: var(--card-bg);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        width: 100%;
+        max-width: 1100px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+
+      .card-header {
+        padding: clamp(18px, 3vw, 28px) clamp(18px, 3vw, 32px)
+          clamp(14px, 2vw, 20px);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .card-header h2 {
+        font-size: clamp(14px, 2vw, 17px);
+        font-weight: 600;
+        color: var(--text-main);
+        letter-spacing: 0.01em;
+      }
+
+      .card-header .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+
+      /* ── Table ── */
+      .table {
+        width: 100%;
+      }
+
+      /* THEAD */
+      .thead {
+        display: none;
+      } /* hidden on mobile, shown ≥600px */
+
+      .thead .tr {
+        display: grid;
+        grid-template-columns: var(--cols);
+        padding: 0 clamp(18px, 3vw, 32px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .th {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 12px 8px;
+      }
+
+      /* TBODY rows */
+      .tbody .tr {
+        display: grid;
+        grid-template-columns: var(--cols);
+        align-items: center;
+        padding: 0 clamp(18px, 3vw, 32px);
+        border-bottom: 1px solid var(--border);
+        transition: background 0.15s;
+        cursor: default;
+      }
+
+      .tbody .tr:last-child {
+        border-bottom: none;
+      }
+
+      .tbody .tr:hover {
+        background: var(--row-hover);
+      }
+
+      .td {
+        font-size: clamp(13px, 1.5vw, 14px);
+        color: var(--text-main);
+        padding: clamp(12px, 2vw, 16px) 8px;
+        min-width: 0; /* allow text truncation */
+      }
+
+      /* Col 1 – avatar + name */
+      .td-col-1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+      }
+
+      .img-wrapper {
+        flex-shrink: 0;
+        width: clamp(32px, 4vw, 40px);
+        height: clamp(32px, 4vw, 40px);
+        border-radius: 50%;
+        border: 2px solid var(--avatar-ring);
+        overflow: hidden;
+        background: var(--accent-lt);
+      }
+
+      .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Col 2 – product name (truncate) */
+      .td-col-2 {
+        color: var(--text-sub);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      /* Col 3 – invoice badge */
+      .td-col-3 .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        background: var(--accent-lt);
+        color: var(--accent);
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+
+      /* Col 4 – price */
+      .td-col-4 {
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+        color: var(--text-main);
+      }
+
+      /* Col 5 – status badge */
+      .td-col-5 .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        background: var(--green-lt);
+        color: var(--green);
+        padding: 4px 12px;
+        border-radius: 20px;
+      }
+
+      .status::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: currentColor;
+      }
+
+      /* ─────────────────────────────
+       RESPONSIVE: column grid
+    ───────────────────────────── */
+
+      /* ≥ 600px: show table with all columns */
+      @media (min-width: 600px) {
+        .table {
+          --cols: 140px 1fr 110px 110px 120px;
+        }
+
+        .thead {
+          display: block;
+        }
+
+        .thead .tr,
+        .tbody .tr {
+          grid-template-columns: var(--cols);
+        }
+      }
+
+      /* ≥ 900px: widen customer column */
+      @media (min-width: 900px) {
+        .table {
+          --cols: 160px 1fr 120px 110px 130px;
+        }
+      }
+
+      /* ≥ 1400px: even more breathing room */
+      @media (min-width: 1400px) {
+        .table {
+          --cols: 200px 1fr 140px 130px 150px;
+        }
+      }
+
+      /* ── MOBILE CARD LAYOUT (< 600px) ── */
+      @media (max-width: 599px) {
+        .card-header {
+          padding: 18px 16px 14px;
+        }
+
+        .thead {
+          display: none !important;
+        }
+
+        .tbody .tr {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          padding: 16px;
+          border-bottom: 1px solid var(--border);
+          position: relative;
+        }
+
+        /* Top row: avatar + name + status */
+        .td-col-1 {
+          padding: 0;
+          margin-bottom: 10px;
+          justify-content: space-between;
+        }
+
+        .td-col-1 .name-block {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        /* Move status badge next to name on mobile */
+        .td-col-5 {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          padding: 0;
+        }
+
+        /* Product */
+        .td-col-2 {
+          font-size: 13px;
+          color: var(--text-main);
+          font-weight: 500;
+          white-space: normal;
+          overflow: visible;
+          text-overflow: unset;
+          padding: 0;
+          margin-bottom: 10px;
+          padding-right: 80px; /* avoid overlap with status badge */
+        }
+
+        /* Meta row: invoice + price */
+        .mobile-meta {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+
+        .td-col-3,
+        .td-col-4 {
+          padding: 0;
+        }
+
+        .td-col-4 {
+          font-size: 13px;
+          color: var(--text-sub);
+        }
+
+        .td-col-4::before {
+          content: "¥";
+          font-size: 11px;
+          margin-right: 1px;
+          color: var(--text-muted);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <span class="dot"></span>
+        <h2>最新报名学员</h2>
+      </div>
+
+      <div class="table">
+        <div class="thead">
+          <div class="tr">
+            <div class="th th-col-1">顾客</div>
+            <div class="th th-col-2">产品</div>
+            <div class="th th-col-3">发票</div>
+            <div class="th th-col-4">价格</div>
+            <div class="th th-col-5">状态</div>
+          </div>
+        </div>
+
+        <div class="tbody">
+          <!-- Row 1 -->
+          <div class="tr">
+            <div class="td td-col-1">
+              <div class="name-block">
+                <div class="img-wrapper">
+                  <img
+                    src="https://api.dicebear.com/9.x/adventurer/svg?seed=Alice&backgroundColor=ffd5dc"
+                    alt="张三"
+                  />
+                </div>
+                <span>张三</span>
+              </div>
+            </div>
+            <div class="td td-col-2">
+              web前端体系课程，是目前最棒的学习体系...
+            </div>
+            <div class="td td-col-3"><span class="badge">已开</span></div>
+            <div class="td td-col-4">6888</div>
+            <div class="td td-col-5"><span class="status">已发货</span></div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="tr">
+            <div class="td td-col-1">
+              <div class="name-block">
+                <div class="img-wrapper">
+                  <img
+                    src="https://api.dicebear.com/9.x/adventurer/svg?seed=Betty&backgroundColor=d5e8ff"
+                    alt="李四"
+                  />
+                </div>
+                <span>李四</span>
+              </div>
+            </div>
+            <div class="td td-col-2">web前端0基础到实战</div>
+            <div class="td td-col-3"><span class="badge">已开</span></div>
+            <div class="td td-col-4">6880</div>
+            <div class="td td-col-5"><span class="status">已发货</span></div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="tr">
+            <div class="td td-col-1">
+              <div class="name-block">
+                <div class="img-wrapper">
+                  <img
+                    src="https://api.dicebear.com/9.x/adventurer/svg?seed=Clara&backgroundColor=ffe5d5"
+                    alt="小丽"
+                  />
+                </div>
+                <span>小丽</span>
+              </div>
+            </div>
+            <div class="td td-col-2">JavaScript系列课程</div>
+            <div class="td td-col-3"><span class="badge">已开</span></div>
+            <div class="td td-col-4">6880</div>
+            <div class="td td-col-5"><span class="status">已发货</span></div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="tr">
+            <div class="td td-col-1">
+              <div class="name-block">
+                <div class="img-wrapper">
+                  <img
+                    src="https://api.dicebear.com/9.x/adventurer/svg?seed=Diana&backgroundColor=e5d5ff"
+                    alt="小红"
+                  />
+                </div>
+                <span>小红</span>
+              </div>
+            </div>
+            <div class="td td-col-2">CSS 6大主流布局</div>
+            <div class="td td-col-3"><span class="badge">已开</span></div>
+            <div class="td td-col-4">6880</div>
+            <div class="td td-col-5"><span class="status">已发货</span></div>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="tr">
+            <div class="td td-col-1">
+              <div class="name-block">
+                <div class="img-wrapper">
+                  <img
+                    src="https://api.dicebear.com/9.x/adventurer/svg?seed=Eva&backgroundColor=d5ffe5"
+                    alt="八戒"
+                  />
+                </div>
+                <span>八戒</span>
+              </div>
+            </div>
+            <div class="td td-col-2">移动WebApp开发课程</div>
+            <div class="td td-col-3"><span class="badge">已开</span></div>
+            <div class="td td-col-4">6880</div>
+            <div class="td td-col-5"><span class="status">已发货</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // On mobile, wrap name + status together and restructure
+      // so the name-block and td-col-2, and meta row render cleanly
+      function restructureMobile() {
+        const isMobile = window.innerWidth < 600;
+        document.querySelectorAll(".tbody .tr").forEach((row) => {
+          const col1 = row.querySelector(".td-col-1");
+          // Ensure name-block wrapper exists
+          if (!col1.querySelector(".name-block")) {
+            const img = col1.querySelector(".img-wrapper");
+            const span = col1.querySelector("span");
+            const nb = document.createElement("div");
+            nb.className = "name-block";
+            nb.append(img, span);
+            col1.innerHTML = "";
+            col1.appendChild(nb);
+          }
+
+          // Wrap col3 + col4 in a .mobile-meta div (only once)
+          if (!row.querySelector(".mobile-meta")) {
+            const col3 = row.querySelector(".td-col-3");
+            const col4 = row.querySelector(".td-col-4");
+            const meta = document.createElement("div");
+            meta.className = "mobile-meta";
+            col4.after(meta);
+            meta.append(col3, col4);
+          }
+        });
+      }
+      restructureMobile();
+      window.addEventListener("resize", restructureMobile);
+    </script>
+  </body>
+</html>

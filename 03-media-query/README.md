@@ -8,6 +8,7 @@
 [Responsive design](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 [Media Query Fundamentals](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries)
 [@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
+
 ## Media Queries Syntax
 
 ### 1. What is media query?
@@ -54,6 +55,10 @@ The example shows the complete media query syntax including:
 @media mediaType {
     ...css
 }
+
+@media {}
+@media all {}
+
 ```
 ### 3. Media Features
 - describe specific features / characteristics of user agent (browsers) that we want to detect.
@@ -61,30 +66,32 @@ The example shows the complete media query syntax including:
 - test whether a specified feature exists or determine the value of the feature.
 - each feature expression are enclosed in parentheses  `()`
 - common media features:
-    - `width`: screen width
+    - `width`: screen width (Rarely use fixed width)
     - `min-width`: >= value
     - `max-width`: <= value
     <!-- Mobile -->
     **Mobile: **
-    - `-webkit-device-pixel-ratio`: dpr value
-    - `-webkit-max-device-pixel-ratio`: max dpr value
-    - `-webkit-min-device-pixel-ratio`: min dpr value
+    - `-webkit-device-pixel-ratio`: dpr value (Need WebKit-based browsers - Rarely used fixed DPR)
+    - `-webkit-max-device-pixel-ratio`: max dpr value (Need WebKit-based browsers)
+    - `-webkit-min-device-pixel-ratio`: min dpr value (Need WebKit-based browsers)
     - `orientation`: portrait / landscape
       - Note: Landscape when width > height
 
+**How to write media query?**
+
 ```css
 /* Only media feature */
-@media (mediaFeature) {
+@media (mediaFeature: value) {
     ...css
 }
 
 /* Specify media type and media feature */
-@media mediaType logicalOperator (mediaFeature) {
+@media mediaType logicalOperator (mediaFeature: value) {
     ...css
 }
 
 /* Specify more than one media feature */
-@media mediaType logicalOperator (mediaFeature1) logicalOperator (mediaFeature2) {
+@media mediaType logicalOperator (mediaFeature1: value) logicalOperator (mediaFeature: value) {
     ...css
 }
 ```
@@ -120,10 +127,14 @@ The example shows the complete media query syntax including:
         ...css
     }
   ```
-- `only`: applies a style only if an entire query matches. Useful for preventing older browsers applying selected styles. E.g., older browsers would interpret `screen and (max-width: 500px)` as `screen`.
+- `only`: applies a style only if an entire query matches.
   - Must specify a media type.
-  - Note: current browsers already support media query, so we can skip this.
-- `or`: equivalent to comma.
+  - Note:
+    -  Useful for preventing older browsers applying selected styles. 
+       -  E.g., older browsers would interpret `screen and (max-width: 500px)` as `screen`. 
+       -  Adding `only` prevents the older browsers from applying styles that it doesn't understand. 
+    - Current browsers already support many latest media query features, so we can skip using `only`.
+- `or`: equivalent to `comma`.
 
 
 ## Responsive Breakpoints
@@ -299,7 +310,7 @@ The example shows the complete media query syntax including:
 ### 1. Grid Layout
 
 - divide a page or a container into several fractions and specify how many fractions the child element will occupy.
-- Usually, a page or a container will be divided into: 12 fractions, 16 fractions or 24 fractions.
+- Usually, a page or a container will be divided into: 12 fractions (Bootstrap uses this), 16 fractions or 24 fractions.
 - If a page (100%) is divided into 12 fractions, then:
   - 1 fraction: 8.33333333%
   - 2 fractions: 16.66666667%

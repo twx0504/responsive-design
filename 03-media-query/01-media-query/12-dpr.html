@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DPR</title>
+    <style>
+      /* Note: The media query order matters!
+      */
+
+      /* Apply if DPR >= 2 */
+      @media screen and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          background-color: red;
+        }
+      }
+
+      /* Apply if DPR >= 3 */
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        body {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>

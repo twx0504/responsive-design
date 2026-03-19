@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orientation</title>
+    <style>
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: blue;
+        }
+      }
+
+      /* Note: We can combine media features. */
+      @media screen and (min-width: 0px) and (orientation: portrait) {
+        body {
+          background-color: yellow;
+        }
+      }
+
+      @media screen and (min-width: 375px) and (orientation: portrait) {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
